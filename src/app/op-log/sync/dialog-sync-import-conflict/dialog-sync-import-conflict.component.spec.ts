@@ -144,6 +144,14 @@ describe('DialogSyncImportConflictComponent', () => {
     // will actually focus (it queries `[cdkFocusInitial]`). Regression guard: a
     // fixed focus on USE_REMOTE would, in the LOCAL_IMPORT_FILTERS_REMOTE scenario,
     // make the keyboard default discard the user's just-made local import.
+    // The icons are Lucide SVGs, so their name sits on the icon element (Material
+    // mirrors the svgIcon binding onto data-mat-icon-name) instead of in the text.
+    const iconNamesIn = (el: Element): string[] =>
+      Array.from(el.querySelectorAll('mat-icon')).map(
+        (icon) =>
+          icon.getAttribute('data-mat-icon-name') ?? icon.textContent?.trim() ?? '',
+      );
+
     const renderWithScenario = (
       scenario: SyncImportConflictData['scenario'],
     ): HTMLElement => {
@@ -176,8 +184,9 @@ describe('DialogSyncImportConflictComponent', () => {
 
       const focused = el.querySelectorAll('[cdkFocusInitial]');
       expect(focused.length).toBe(1);
-      // USE_REMOTE carries the cloud_download icon.
-      expect(focused[0].textContent).toContain('cloud_download');
+      // USE_REMOTE carries the cloud_download icon. It is an SVG now, so the
+      // name is on the icon element rather than in the button's text.
+      expect(iconNamesIn(focused[0])).toContain('cloud_download');
     });
 
     it('focuses USE_LOCAL for LOCAL_IMPORT_FILTERS_REMOTE (USE_REMOTE would discard the local import)', () => {
@@ -186,7 +195,7 @@ describe('DialogSyncImportConflictComponent', () => {
       const focused = el.querySelectorAll('[cdkFocusInitial]');
       expect(focused.length).toBe(1);
       // USE_LOCAL carries the cloud_upload icon.
-      expect(focused[0].textContent).toContain('cloud_upload');
+      expect(iconNamesIn(focused[0])).toContain('cloud_upload');
     });
   });
 });

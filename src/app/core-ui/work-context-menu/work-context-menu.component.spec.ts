@@ -32,9 +32,14 @@ describe('WorkContextMenuComponent', () => {
   const logicalDoneOn = new Date(2026, 5, 5, 1, 0, 0).getTime();
 
   // Finds the rendered mat-menu-item whose icon matches `iconName`.
+  // Icons are Lucide SVGs, so the name lives in the svgIcon binding rather than
+  // in the element text. Material mirrors it onto data-mat-icon-name; the text
+  // check stays for icons still rendered from the font.
   const menuButtonByIcon = (iconName: string): HTMLButtonElement | null => {
     const icon = Array.from(fixture.nativeElement.querySelectorAll('mat-icon')).find(
-      (el) => (el as HTMLElement).textContent?.trim() === iconName,
+      (el) =>
+        (el as HTMLElement).getAttribute('data-mat-icon-name') === iconName ||
+        (el as HTMLElement).textContent?.trim() === iconName,
     );
     return (icon as HTMLElement)?.closest('button') ?? null;
   };
