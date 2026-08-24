@@ -79,7 +79,7 @@
           [matTooltip]="T.F.TASK.ADD_TASK_BAR.TOOLTIP_ADD_TASK | translate"
           matTooltipPosition="above"
         >
-          <mat-icon>add</mat-icon>
+          <mat-icon svgIcon="lucide:add"></mat-icon>
         </button>
       </div>
 
@@ -121,7 +121,7 @@
         [matTooltip]="searchLabel"
         matTooltipPosition="above"
       >
-        <mat-icon>search</mat-icon>
+        <mat-icon svgIcon="lucide:search"></mat-icon>
       </button>
 
       <!-- Note toggle only makes sense while composing a task (the note field
@@ -172,7 +172,7 @@
 
       @if (activatedIssueTask() && activatedIssueTask()!.issueType === undefined) {
         <div class="add-issue-info-text bold">
-          <mat-icon>playlist_add</mat-icon>
+          <mat-icon svgIcon="lucide:playlist_add"></mat-icon>
           {{
             T.F.TASK.ADD_TASK_BAR.ADD_EXISTING_TASK
               | translate: { taskTitle: activatedIssueTask()!.title }
@@ -180,7 +180,7 @@
         </div>
       } @else {
         <div class="add-issue-info-text">
-          <mat-icon>playlist_add</mat-icon>
+          <mat-icon svgIcon="lucide:playlist_add"></mat-icon>
           {{ T.F.TASK.ADD_TASK_BAR.SEARCH_INFO_TEXT | translate }}
         </div>
       }
@@ -234,11 +234,11 @@
       @if (item.issueType) {
         <mat-icon [svgIcon]="item.issueType | issueIcon"></mat-icon>
       } @else if (item.taskId && item.isArchivedTask) {
-        <mat-icon>archive</mat-icon>
+        <mat-icon svgIcon="lucide:archive"></mat-icon>
       } @else if (item.taskId) {
-        <!--        <mat-icon>task</mat-icon>-->
+        <!--        <mat-icon svgIcon="lucide:task"></mat-icon>-->
       } @else if (!item.ctx) {
-        <mat-icon>library_books</mat-icon>
+        <mat-icon svgIcon="lucide:library_books"></mat-icon>
       }
       <span [innerHTML]="item?.titleHighlighted || item?.title"></span>
       @if (item.ctx) {

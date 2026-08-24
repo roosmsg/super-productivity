@@ -168,9 +168,9 @@
       (click)="toggleProjectVisibility(project.id)"
     >
       @if (!project.isHiddenFromMenu) {
-        <mat-icon>visibility</mat-icon>
+        <mat-icon svgIcon="lucide:visibility"></mat-icon>
       } @else {
-        <mat-icon>visibility_off</mat-icon>
+        <mat-icon svgIcon="lucide:visibility_off"></mat-icon>
       }
       <mat-icon
         class="nav-icon"
@@ -187,7 +187,7 @@
       mat-menu-item
       (click)="goToArchivedProjects()"
     >
-      <mat-icon>archive</mat-icon>
+      <mat-icon svgIcon="lucide:archive"></mat-icon>
       <span
         [attr.aria-label]="`${(T.F.PROJECT.ARCHIVED_PROJECTS.LINK_LABEL | translate)} (${archivedProjectsCount()})`"
       >

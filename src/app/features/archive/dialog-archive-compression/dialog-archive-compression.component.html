@@ -8,12 +8,12 @@
     </div>
   } @else if (error()) {
     <div class="error">
-      <mat-icon>error</mat-icon>
+      <mat-icon svgIcon="lucide:error"></mat-icon>
       <p>{{ error() }}</p>
     </div>
   } @else if (!hasDataToCompress()) {
     <div class="empty">
-      <mat-icon>check_circle</mat-icon>
+      <mat-icon svgIcon="lucide:check_circle"></mat-icon>
       <p>{{ T.F.TIME_TRACKING.D_ARCHIVE_COMPRESS.NO_DATA | translate }}</p>
     </div>
   } @else {
@@ -22,7 +22,7 @@
     <div class="preview-stats">
       @if (preview()!.subtasksToDelete > 0) {
         <div class="stat-item">
-          <mat-icon>delete</mat-icon>
+          <mat-icon svgIcon="lucide:delete"></mat-icon>
           <div class="stat-info">
             <strong>{{ preview()!.subtasksToDelete }}</strong>
             <span>{{
@@ -34,7 +34,7 @@
 
       @if (preview()!.notesToClear > 0) {
         <div class="stat-item">
-          <mat-icon>note</mat-icon>
+          <mat-icon svgIcon="lucide:note"></mat-icon>
           <div class="stat-info">
             <strong>{{ preview()!.notesToClear }}</strong>
             <span>{{
@@ -46,7 +46,7 @@
 
       @if (preview()!.issueFieldsToClear > 0) {
         <div class="stat-item">
-          <mat-icon>link_off</mat-icon>
+          <mat-icon svgIcon="lucide:link_off"></mat-icon>
           <div class="stat-info">
             <strong>{{ preview()!.issueFieldsToClear }}</strong>
             <span>{{
@@ -57,7 +57,7 @@
       }
 
       <div class="stat-item highlight">
-        <mat-icon>save</mat-icon>
+        <mat-icon svgIcon="lucide:save"></mat-icon>
         <div class="stat-info">
           <strong>~{{ preview()!.estimatedSavingsKB }} KB</strong>
           <span>{{
@@ -68,7 +68,10 @@
     </div>
 
     <div class="callout callout--warning">
-      <mat-icon aria-hidden="true">warning</mat-icon>
+      <mat-icon
+        aria-hidden="true"
+        svgIcon="lucide:warning"
+      ></mat-icon>
       <p>{{ T.F.TIME_TRACKING.D_ARCHIVE_COMPRESS.WARNING | translate }}</p>
     </div>
   }

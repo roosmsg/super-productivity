@@ -5,12 +5,15 @@
     style="margin-right: 8px; opacity: 0.5"
     (click)="openSettings()"
   >
-    <mat-icon>settings</mat-icon>
+    <mat-icon svgIcon="lucide:settings"></mat-icon>
   </button>
   <div class="title">{{ issueProviderTooltip() }}</div>
   @let defaultP = defaultProject();
   @if (defaultP) {
-    <mat-icon class="arrow">arrow_forward</mat-icon>
+    <mat-icon
+      class="arrow"
+      svgIcon="lucide:arrow_forward"
+    ></mat-icon>
     <div class="default-project">{{ defaultP.title }}</div>
   }
 </header>
@@ -43,7 +46,7 @@
         style="width: 100%; margin: 0"
         appearance="outline"
       >
-        <!--      <mat-icon matPrefix>filter_alt</mat-icon>-->
+        <!--      <mat-icon matPrefix svgIcon="lucide:filter_alt"></mat-icon>-->
         <!--      <mat-label>Filter</mat-label>-->
         <mat-label>Search</mat-label>
         <mat-icon
@@ -131,7 +134,7 @@
         <!--        mat-icon-button-->
         <!--        color=""-->
         <!--      >-->
-        <!--        <mat-icon>add</mat-icon>-->
+        <!--        <mat-icon svgIcon="lucide:add"></mat-icon>-->
         <!--      </button>-->
         <issue-preview-item
           [issueProviderId]="ip.id"

@@ -82,7 +82,7 @@
             color="primary"
             mat-icon-button
           >
-            <mat-icon>add</mat-icon>
+            <mat-icon svgIcon="lucide:add"></mat-icon>
           </button>
         }
       </div>
@@ -149,22 +149,31 @@
             @if (syncIsEnabledAndReady()) {
               @if (isOnline()) {
                 @if (syncState() === 'ERROR') {
-                  <mat-icon>sync_problem</mat-icon>
+                  <mat-icon svgIcon="lucide:sync_problem"></mat-icon>
                 } @else {
-                  <mat-icon [class.spin]="isSyncInProgress()">sync</mat-icon>
+                  <mat-icon
+                    [class.spin]="isSyncInProgress()"
+                    svgIcon="lucide:sync"
+                  ></mat-icon>
                 }
                 @if (hasNoPendingOps()) {
                   @if (superSyncIsConfirmedInSync()) {
-                    <mat-icon class="sync-state-ico">done_all</mat-icon>
+                    <mat-icon
+                      class="sync-state-ico"
+                      svgIcon="lucide:done_all"
+                    ></mat-icon>
                   } @else {
-                    <mat-icon class="sync-state-ico">check</mat-icon>
+                    <mat-icon
+                      class="sync-state-ico"
+                      svgIcon="lucide:check"
+                    ></mat-icon>
                   }
                 }
               } @else {
-                <mat-icon>wifi_off</mat-icon>
+                <mat-icon svgIcon="lucide:wifi_off"></mat-icon>
               }
             } @else {
-              <mat-icon>sync_disabled</mat-icon>
+              <mat-icon svgIcon="lucide:sync_disabled"></mat-icon>
             }
           </button>
         }

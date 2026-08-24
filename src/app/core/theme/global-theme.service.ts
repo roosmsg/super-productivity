@@ -23,6 +23,7 @@ import {
 import { NavigationEnd, Router } from '@angular/router';
 import { IS_TOUCH_ONLY } from '../../util/is-touch-only';
 import { MaterialCssVarsService } from 'angular-material-css-vars';
+import { LUCIDE_ICON_MAP } from './lucide-icon-map.const';
 import { DOCUMENT } from '@angular/common';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -368,6 +369,18 @@ export class GlobalThemeService {
   }
 
   private _initIcons(): void {
+    // Lucide first: same registry, own namespace, so `svgIcon="lucide:add"`
+    // resolves while the app's own SVG icons keep their bare names.
+    LUCIDE_ICON_MAP.forEach(([ligature, file]) => {
+      this._matIconRegistry.addSvgIconInNamespace(
+        'lucide',
+        ligature,
+        this._domSanitizer.bypassSecurityTrustResourceUrl(
+          `assets/icons/lucide/${file}.svg`,
+        ),
+      );
+    });
+
     const icons: [string, string][] = [
       ['sp', 'assets/icons/sp.svg'],
       ['github', 'assets/icons/github.svg'],

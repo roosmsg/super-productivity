@@ -11,7 +11,7 @@
     [routerLinkActiveOptions]="{ exact: false }"
     [attr.aria-label]="T.G.TODAY_TAG_TITLE | translate"
   >
-    <mat-icon>wb_sunny</mat-icon>
+    <mat-icon svgIcon="lucide:wb_sunny"></mat-icon>
   </button>
 
   <button
@@ -21,7 +21,7 @@
     routerLinkActive="active"
     [attr.aria-label]="T.MH.PLANNER | translate"
   >
-    <mat-icon>edit_calendar</mat-icon>
+    <mat-icon svgIcon="lucide:edit_calendar"></mat-icon>
   </button>
 
   <button
@@ -33,7 +33,7 @@
     (click)="showAddTaskBar()"
     [attr.aria-label]="T.GCF.KEYBOARD.GLOBAL_ADD_TASK | translate"
   >
-    <mat-icon>add</mat-icon>
+    <mat-icon svgIcon="lucide:add"></mat-icon>
   </button>
 
   @if (hasSidePanelMenuItems()) {
@@ -43,7 +43,7 @@
       [matMenuTriggerFor]="panelsMenu"
       [attr.aria-label]="T.MH.SIDE_PANEL_MENU | translate"
     >
-      <mat-icon>bottom_panel_open</mat-icon>
+      <mat-icon svgIcon="lucide:bottom_panel_open"></mat-icon>
     </button>
   }
 
@@ -53,7 +53,7 @@
     (click)="toggleMobileNav()"
     [attr.aria-label]="T.MH.PROJECT_MENU | translate"
   >
-    <mat-icon>menu</mat-icon>
+    <mat-icon svgIcon="lucide:menu"></mat-icon>
   </button>
 </nav>
 
@@ -82,7 +82,7 @@
       [class.active]="isShowScheduleDayPanel()"
       (click)="toggleScheduleDayPanel()"
     >
-      <mat-icon>schedule</mat-icon>
+      <mat-icon svgIcon="lucide:schedule"></mat-icon>
       <span>{{ T.BN.SHOW_SCHEDULE | translate }}</span>
     </button>
   }
@@ -94,7 +94,7 @@
       [class.active]="isShowIssuePanel()"
       (click)="toggleIssuePanel()"
     >
-      <mat-icon>webhook</mat-icon>
+      <mat-icon svgIcon="lucide:webhook"></mat-icon>
       <span>{{ T.BN.SHOW_ISSUE_PANEL | translate }}</span>
     </button>
   }
@@ -106,7 +106,7 @@
       [class.active]="isShowNotes()"
       (click)="toggleNotes()"
     >
-      <mat-icon>comment</mat-icon>
+      <mat-icon svgIcon="lucide:comment"></mat-icon>
       <span>{{ T.BN.SHOW_NOTES | translate }}</span>
     </button>
   }

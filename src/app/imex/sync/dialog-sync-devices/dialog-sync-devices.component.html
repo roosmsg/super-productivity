@@ -7,7 +7,7 @@
     </div>
   } @else if (error()) {
     <div class="error">
-      <mat-icon>error</mat-icon>
+      <mat-icon svgIcon="lucide:error"></mat-icon>
       <p>{{ error() | translate }}</p>
     </div>
   } @else {
@@ -35,7 +35,7 @@
         </div>
       } @empty {
         <div class="empty">
-          <mat-icon>devices_other</mat-icon>
+          <mat-icon svgIcon="lucide:devices_other"></mat-icon>
           <p>{{ T.F.SYNC.D_DEVICES.NO_DEVICES | translate }}</p>
         </div>
       }

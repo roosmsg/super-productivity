@@ -20,15 +20,15 @@
         (ngModelChange)="selectMode($event)"
       >
         <mat-button-toggle value="BREAK">
-          <mat-icon>free_breakfast</mat-icon>
+          <mat-icon svgIcon="lucide:free_breakfast"></mat-icon>
           {{ T.F.TIME_TRACKING.D_IDLE.MODE_BREAK | translate }}
         </mat-button-toggle>
         <mat-button-toggle value="TASK">
-          <mat-icon>track_changes</mat-icon>
+          <mat-icon svgIcon="lucide:track_changes"></mat-icon>
           {{ T.F.TIME_TRACKING.D_IDLE.MODE_TASK | translate }}
         </mat-button-toggle>
         <mat-button-toggle value="SPLIT">
-          <mat-icon>call_split</mat-icon>
+          <mat-icon svgIcon="lucide:call_split"></mat-icon>
           {{ T.F.TIME_TRACKING.D_IDLE.MODE_SPLIT | translate }}
         </mat-button-toggle>
       </mat-button-toggle-group>
@@ -77,7 +77,7 @@
               class="simple-counter-warning"
               [@expand]
             >
-              <mat-icon>info</mat-icon>
+              <mat-icon svgIcon="lucide:info"></mat-icon>
               {{
                 (mode === 'BREAK'
                   ? T.F.TIME_TRACKING.D_IDLE.WARN_SIMPLE_COUNTER_BREAK
@@ -108,14 +108,14 @@
                   [aria-label]="T.F.TIME_TRACKING.D_IDLE.BREAK | translate"
                   [matTooltip]="T.F.TIME_TRACKING.D_IDLE.BREAK | translate"
                 >
-                  <mat-icon>free_breakfast</mat-icon>
+                  <mat-icon svgIcon="lucide:free_breakfast"></mat-icon>
                 </mat-button-toggle>
                 <mat-button-toggle
                   value="TASK"
                   [aria-label]="T.F.TIME_TRACKING.D_IDLE.TASK | translate"
                   [matTooltip]="T.F.TIME_TRACKING.D_IDLE.TASK | translate"
                 >
-                  <mat-icon>track_changes</mat-icon>
+                  <mat-icon svgIcon="lucide:track_changes"></mat-icon>
                 </mat-button-toggle>
               </mat-button-toggle-group>
 
@@ -156,7 +156,7 @@
                     "
                     [matTooltip]="T.F.TIME_TRACKING.D_IDLE.USE_REMAINING_TIME | translate"
                   >
-                    <mat-icon>more_time</mat-icon>
+                    <mat-icon svgIcon="lucide:more_time"></mat-icon>
                   </button>
                 }
               </mat-form-field>
@@ -180,7 +180,7 @@
                 [attr.aria-label]="T.G.REMOVE | translate"
                 [matTooltip]="T.G.REMOVE | translate"
               >
-                <mat-icon>close</mat-icon>
+                <mat-icon svgIcon="lucide:close"></mat-icon>
               </button>
             </div>
           }
@@ -191,7 +191,7 @@
               type="button"
               (click)="addSplitItem()"
             >
-              <mat-icon>add</mat-icon>
+              <mat-icon svgIcon="lucide:add"></mat-icon>
               {{ T.F.TIME_TRACKING.D_IDLE.ADD_ENTRY | translate }}
             </button>
             <div

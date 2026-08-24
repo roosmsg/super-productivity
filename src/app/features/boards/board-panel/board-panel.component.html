@@ -14,11 +14,11 @@
     (click)="editBoard.emit()"
     [attr.aria-label]="T.G.EDIT | translate"
   >
-    <mat-icon>edit</mat-icon>
+    <mat-icon svgIcon="lucide:edit"></mat-icon>
   </button>
 
   <!--        <button mat-icon-button>-->
-  <!--          <mat-icon>more_vert</mat-icon>-->
+  <!--          <mat-icon svgIcon="lucide:more_vert"></mat-icon>-->
   <!--        </button>-->
 </header>
 
@@ -55,7 +55,7 @@
           color=""
           mat-icon-button
         >
-          <mat-icon>alarm</mat-icon>
+          <mat-icon svgIcon="lucide:alarm"></mat-icon>
           <div
             class="time-badge"
             [innerHTML]="task.dueWithTime | shortPlannedAt"
@@ -70,7 +70,7 @@
           color=""
           mat-icon-button
         >
-          <mat-icon>today</mat-icon>
+          <mat-icon svgIcon="lucide:today"></mat-icon>
           <div class="time-badge">{{ task.dueDay | localDateStr }}</div>
         </button>
       }

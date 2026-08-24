@@ -30,7 +30,7 @@
         @if (attachment.type === 'IMG' && !isError[i]) {
           @if (attachment.isLoading) {
             <div class="image-loading">
-              <mat-icon>image</mat-icon>
+              <mat-icon svgIcon="lucide:image"></mat-icon>
               <span>Loading image...</span>
             </div>
           } @else {
@@ -55,10 +55,10 @@
             taskAttachmentLink
           >
             @if (attachment.type === 'IMG') {
-              <mat-icon>search</mat-icon>
+              <mat-icon svgIcon="lucide:search"></mat-icon>
             }
             @if (attachment.type !== 'IMG') {
-              <mat-icon>open_in_new</mat-icon>
+              <mat-icon svgIcon="lucide:open_in_new"></mat-icon>
             }
           </a>
           @if (attachment.type !== 'IMG') {
@@ -67,7 +67,7 @@
               class="copy-btn"
               mat-flat-button
             >
-              <mat-icon>content_copy</mat-icon>
+              <mat-icon svgIcon="lucide:content_copy"></mat-icon>
             </button>
           }
           <button
@@ -75,7 +75,7 @@
             class="edit-btn"
             mat-flat-button
           >
-            <mat-icon>edit</mat-icon>
+            <mat-icon svgIcon="lucide:edit"></mat-icon>
           </button>
           @if (attachment.id) {
             <button
@@ -83,7 +83,10 @@
               class="trash-btn"
               mat-flat-button
             >
-              <mat-icon color="warn">delete_forever</mat-icon>
+              <mat-icon
+                color="warn"
+                svgIcon="lucide:delete_forever"
+              ></mat-icon>
             </button>
           }
         </div>

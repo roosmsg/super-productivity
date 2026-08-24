@@ -30,7 +30,7 @@
           [disabled]="!formEl.valid"
           type="button"
         >
-          <mat-icon>refresh</mat-icon>
+          <mat-icon svgIcon="lucide:refresh"></mat-icon>
           {{ T.F.SYNC.D_DECRYPT_ERROR.CHANGE_PW_AND_DECRYPT | translate }}
         </button>
       </div>
@@ -50,7 +50,7 @@
         (click)="updatePWAndForceUpload()"
         [disabled]="!passwordVal"
       >
-        <mat-icon>cloud_upload</mat-icon>
+        <mat-icon svgIcon="lucide:cloud_upload"></mat-icon>
         {{ T.F.SYNC.D_DECRYPT_ERROR.BTN_OVER_WRITE_REMOTE | translate }}
       </button>
     </div>

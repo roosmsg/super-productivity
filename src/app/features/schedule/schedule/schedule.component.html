@@ -9,7 +9,7 @@
       [matTooltip]="T.F.SCHEDULE.VIEW_DAY | translate"
       [attr.aria-label]="T.F.SCHEDULE.VIEW_DAY | translate"
     >
-      <mat-icon>calendar_view_day</mat-icon>
+      <mat-icon svgIcon="lucide:calendar_view_day"></mat-icon>
     </button>
     <button
       mat-icon-button
@@ -20,7 +20,7 @@
       [matTooltip]="T.F.SCHEDULE.VIEW_WEEK | translate"
       [attr.aria-label]="T.F.SCHEDULE.VIEW_WEEK | translate"
     >
-      <mat-icon>view_week</mat-icon>
+      <mat-icon svgIcon="lucide:view_week"></mat-icon>
     </button>
     <button
       mat-icon-button
@@ -31,7 +31,7 @@
       [matTooltip]="T.F.SCHEDULE.VIEW_MONTH | translate"
       [attr.aria-label]="T.F.SCHEDULE.VIEW_MONTH | translate"
     >
-      <mat-icon>calendar_month</mat-icon>
+      <mat-icon svgIcon="lucide:calendar_month"></mat-icon>
     </button>
   </div>
 
@@ -42,7 +42,7 @@
       [matTooltip]="T.F.SCHEDULE.CALENDAR_VISIBILITY | translate"
       [attr.aria-label]="T.F.SCHEDULE.CALENDAR_VISIBILITY | translate"
     >
-      <mat-icon>event_note</mat-icon>
+      <mat-icon svgIcon="lucide:event_note"></mat-icon>
     </button>
     <mat-menu #calFilterMenu="matMenu">
       <ng-template matMenuContent>
@@ -55,9 +55,9 @@
               (click)="toggleCalProvider(provider.id)"
             >
               @if (hiddenCalendarProviderIds().includes(provider.id)) {
-                <mat-icon>check_box_outline_blank</mat-icon>
+                <mat-icon svgIcon="lucide:check_box_outline_blank"></mat-icon>
               } @else {
-                <mat-icon>check_box</mat-icon>
+                <mat-icon svgIcon="lucide:check_box"></mat-icon>
               }
               @if (provider.color) {
                 <span
@@ -95,7 +95,7 @@
         ) | translate
       "
     >
-      <mat-icon>chevron_left</mat-icon>
+      <mat-icon svgIcon="lucide:chevron_left"></mat-icon>
     </button>
 
     <button
@@ -106,7 +106,7 @@
       [attr.aria-label]="T.G.TODAY_TAG_TITLE | translate"
       [matTooltip]="T.G.TODAY_TAG_TITLE | translate"
     >
-      <mat-icon>wb_sunny</mat-icon>
+      <mat-icon svgIcon="lucide:wb_sunny"></mat-icon>
     </button>
 
     <button
@@ -129,7 +129,7 @@
         ) | translate
       "
     >
-      <mat-icon>chevron_right</mat-icon>
+      <mat-icon svgIcon="lucide:chevron_right"></mat-icon>
     </button>
   </div>
 

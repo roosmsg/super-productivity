@@ -9,10 +9,16 @@
     required
   />
   @if (!isCreate()) {
-    <mat-icon matSuffix="">track_changes</mat-icon>
+    <mat-icon
+      matSuffix=""
+      svgIcon="lucide:track_changes"
+    ></mat-icon>
   }
   @if (isCreate()) {
-    <mat-icon matSuffix="">add</mat-icon>
+    <mat-icon
+      matSuffix=""
+      svgIcon="lucide:add"
+    ></mat-icon>
   }
 
   <mat-autocomplete
@@ -35,7 +41,7 @@
         @if (task.projectId) {
           <!---->
           @if (!task.issueType && !projectMap()[task.projectId]) {
-            <mat-icon>library_books</mat-icon>
+            <mat-icon svgIcon="lucide:library_books"></mat-icon>
           }
           @if (projectMap()[task.projectId]) {
             <tag [tag]="projectMap()[task.projectId]"></tag>

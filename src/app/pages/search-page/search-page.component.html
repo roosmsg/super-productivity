@@ -19,7 +19,7 @@
           (click)="clearSearch()"
           [attr.aria-label]="T.G.CLEAR | translate"
         >
-          <mat-icon>clear</mat-icon>
+          <mat-icon svgIcon="lucide:clear"></mat-icon>
         </button>
       }
     </mat-form-field>
@@ -41,9 +41,15 @@
             <div class="search-result-content">
               <div class="task-info">
                 @if (item.parentId && item.parentTitle) {
-                  <mat-icon class="subtask-icon">subdirectory_arrow_right</mat-icon>
+                  <mat-icon
+                    class="subtask-icon"
+                    svgIcon="lucide:subdirectory_arrow_right"
+                  ></mat-icon>
                   <span class="subtask-breadcrumb">{{ item.parentTitle }}</span>
-                  <mat-icon class="subtask-icon">chevron_right</mat-icon>
+                  <mat-icon
+                    class="subtask-icon"
+                    svgIcon="lucide:chevron_right"
+                  ></mat-icon>
                 }
                 <div
                   class="task-title"
@@ -67,10 +73,16 @@
                     ></mat-icon>
                   }
                   @if (item.isNote) {
-                    <mat-icon class="issue-icon">comment</mat-icon>
+                    <mat-icon
+                      class="issue-icon"
+                      svgIcon="lucide:comment"
+                    ></mat-icon>
                   }
                   @if (item.isArchiveTask) {
-                    <mat-icon class="archive-icon">archive</mat-icon>
+                    <mat-icon
+                      class="archive-icon"
+                      svgIcon="lucide:archive"
+                    ></mat-icon>
                     <button
                       (click)="viewArchivedTaskDetails(item, $event)"
                       [title]="T.F.WORKLOG.CMP.VIEW_TASK_DETAILS | translate"
@@ -78,7 +90,7 @@
                       mat-icon-button
                       class="view-details-btn"
                     >
-                      <mat-icon>info</mat-icon>
+                      <mat-icon svgIcon="lucide:info"></mat-icon>
                     </button>
                   }
                 </div>
@@ -89,12 +101,12 @@
       </mat-list>
     } @else if (searchForm.value && searchForm.value.trim()) {
       <div class="no-results">
-        <mat-icon>search_off</mat-icon>
+        <mat-icon svgIcon="lucide:search_off"></mat-icon>
         <p>{{ T.F.SEARCH_BAR.NO_RESULTS | translate }}</p>
       </div>
     } @else {
       <div class="search-prompt">
-        <mat-icon>search</mat-icon>
+        <mat-icon svgIcon="lucide:search"></mat-icon>
         <p>{{ T.F.SEARCH_BAR.INFO | translate }}</p>
       </div>
     }

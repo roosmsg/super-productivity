@@ -31,7 +31,7 @@
                     >
                       <strong>∑ {{ day.value.timeSpent | msToClockString }}</strong>
                       &nbsp;
-                      <mat-icon>list</mat-icon>
+                      <mat-icon svgIcon="lucide:list"></mat-icon>
                       <strong>{{ day.value.logEntries.length }}</strong>
                       @if (day.value.workStart) {
                         <em
@@ -46,7 +46,10 @@
                             class="simple-counter-item focus-summary-item"
                             [attr.title]="T.F.WORKLOG.WEEK.FOCUS_SUMMARY | translate"
                           >
-                            <mat-icon inline="true">center_focus_strong</mat-icon>
+                            <mat-icon
+                              inline="true"
+                              svgIcon="lucide:center_focus_strong"
+                            ></mat-icon>
                             <div class="count">
                               {{ focusSummary.count }} /
                               {{ focusSummary.total | msToMinuteClockString }}
@@ -80,7 +83,10 @@
               </div>
               <div class="with-icon">
                 @if (visibility[i]) {
-                  <mat-icon [@fade]>timer </mat-icon>
+                  <mat-icon
+                    [@fade]
+                    svgIcon="lucide:timer"
+                  ></mat-icon>
                 }
               </div>
             </div>
@@ -128,7 +134,7 @@
         color=""
         mat-button
       >
-        <mat-icon>call_made</mat-icon>
+        <mat-icon svgIcon="lucide:call_made"></mat-icon>
         {{ T.F.WORKLOG.WEEK.EXPORT | translate }}
       </button>
     </div>

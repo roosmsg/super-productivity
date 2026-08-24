@@ -5,7 +5,7 @@
     type="button"
     (click)="openSetupDialog('ICAL', 'GOOGLE')"
   >
-    <mat-icon>calendar_month</mat-icon>
+    <mat-icon svgIcon="lucide:calendar_month"></mat-icon>
     <span>Google Calendar (iCal)</span>
   </button>
   <button
@@ -13,7 +13,7 @@
     type="button"
     (click)="openSetupDialog('ICAL', 'OUTLOOK365')"
   >
-    <mat-icon>calendar_month</mat-icon>
+    <mat-icon svgIcon="lucide:calendar_month"></mat-icon>
     <span>Outlook 365</span>
   </button>
   <button
@@ -21,7 +21,7 @@
     type="button"
     (click)="openSetupDialog('ICAL', 'OTHER')"
   >
-    <mat-icon>calendar_month</mat-icon>
+    <mat-icon svgIcon="lucide:calendar_month"></mat-icon>
     <span>Other (iCal)</span>
   </button>
   @for (provider of pluginCalendarProviders; track provider.pluginId) {
@@ -33,7 +33,7 @@
       @if (provider.icon && provider.icon !== 'extension') {
         <mat-icon [svgIcon]="provider.icon"></mat-icon>
       } @else {
-        <mat-icon>calendar_month</mat-icon>
+        <mat-icon svgIcon="lucide:calendar_month"></mat-icon>
       }
       <span>{{ provider.name }}</span>
     </button>
@@ -47,7 +47,7 @@
       @if (provider.icon && provider.icon !== 'extension') {
         <mat-icon [svgIcon]="provider.icon"></mat-icon>
       } @else {
-        <mat-icon>calendar_month</mat-icon>
+        <mat-icon svgIcon="lucide:calendar_month"></mat-icon>
       }
       <span>{{ provider.name }}</span>
     </button>
@@ -126,7 +126,7 @@
       @if (provider.icon && provider.icon !== 'extension') {
         <mat-icon [svgIcon]="provider.icon"></mat-icon>
       } @else {
-        <mat-icon>extension</mat-icon>
+        <mat-icon svgIcon="lucide:extension"></mat-icon>
       }
       <span>{{ provider.name }}</span>
     </button>
@@ -140,7 +140,7 @@
       @if (provider.icon && provider.icon !== 'extension') {
         <mat-icon [svgIcon]="provider.icon"></mat-icon>
       } @else {
-        <mat-icon>extension</mat-icon>
+        <mat-icon svgIcon="lucide:extension"></mat-icon>
       }
       <span>{{ provider.name }}</span>
     </button>

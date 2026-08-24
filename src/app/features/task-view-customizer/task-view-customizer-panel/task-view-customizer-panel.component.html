@@ -8,7 +8,7 @@
     mat-menu-item
     [matMenuTriggerFor]="sortMenu"
   >
-    <mat-icon>sort</mat-icon>
+    <mat-icon svgIcon="lucide:sort"></mat-icon>
     <span>{{ T.F.TASK_VIEW.CUSTOMIZER.SORT | translate }}</span>
     @if (customizerService.selectedSort().type) {
       <span class="current-value">
@@ -22,7 +22,7 @@
     mat-menu-item
     [matMenuTriggerFor]="groupMenu"
   >
-    <mat-icon>group_work</mat-icon>
+    <mat-icon svgIcon="lucide:group_work"></mat-icon>
     <span>{{ T.F.TASK_VIEW.CUSTOMIZER.GROUP_BY | translate }}</span>
     @if (customizerService.selectedGroup().type) {
       <span class="current-value">
@@ -36,7 +36,7 @@
     mat-menu-item
     [matMenuTriggerFor]="filterMenu"
   >
-    <mat-icon>filter_alt</mat-icon>
+    <mat-icon svgIcon="lucide:filter_alt"></mat-icon>
     <span>{{ T.F.TASK_VIEW.CUSTOMIZER.FILTER_BY | translate }}</span>
     @if (customizerService.selectedFilter().type) {
       <span class="current-value">
@@ -52,7 +52,7 @@
     mat-menu-item
     (click)="onResetAll()"
   >
-    <mat-icon>refresh</mat-icon>
+    <mat-icon svgIcon="lucide:refresh"></mat-icon>
     <span>{{ T.F.TASK_VIEW.CUSTOMIZER.RESET_ALL | translate }}</span>
   </button>
 </mat-menu>
@@ -75,7 +75,10 @@
               }}
             </mat-icon>
           } @else {
-            <mat-icon class="check-icon">check</mat-icon>
+            <mat-icon
+              class="check-icon"
+              svgIcon="lucide:check"
+            ></mat-icon>
           }
         }
       </span>
@@ -90,7 +93,10 @@
     [disabled]="customizerService.selectedSort().type === DEFAULT.sort.type"
   >
     <span class="menu-item-content">
-      <mat-icon class="check-icon">save</mat-icon>
+      <mat-icon
+        class="check-icon"
+        svgIcon="lucide:save"
+      ></mat-icon>
 
       <span>{{ T.F.TASK_VIEW.CUSTOMIZER.SAVE_SORT | translate }}</span>
     </span>
@@ -108,7 +114,10 @@
       <span class="menu-item-content">
         <span>{{ opt.label | translate }}</span>
         @if (customizerService.selectedGroup().type === opt.type) {
-          <mat-icon class="check-icon">check</mat-icon>
+          <mat-icon
+            class="check-icon"
+            svgIcon="lucide:check"
+          ></mat-icon>
         }
       </span>
     </button>
@@ -125,7 +134,10 @@
     <span class="menu-item-content">
       <span>{{ T.F.TASK_VIEW.CUSTOMIZER.FILTER_DEFAULT | translate }}</span>
       @if (!customizerService.selectedFilter().type) {
-        <mat-icon class="check-icon">check</mat-icon>
+        <mat-icon
+          class="check-icon"
+          svgIcon="lucide:check"
+        ></mat-icon>
       }
     </span>
   </button>
@@ -138,7 +150,10 @@
     <span class="menu-item-content">
       <span>{{ T.F.TASK_VIEW.CUSTOMIZER.FILTER_TAG | translate }}</span>
       @if (customizerService.selectedFilter().type === OPTIONS.filter.types.tag) {
-        <mat-icon class="check-icon">check</mat-icon>
+        <mat-icon
+          class="check-icon"
+          svgIcon="lucide:check"
+        ></mat-icon>
       }
     </span>
   </button>
@@ -153,7 +168,10 @@
     <span class="menu-item-content">
       <span>{{ T.F.TASK_VIEW.CUSTOMIZER.FILTER_PROJECT | translate }}</span>
       @if (customizerService.selectedFilter().type === OPTIONS.filter.types.project) {
-        <mat-icon class="check-icon">check</mat-icon>
+        <mat-icon
+          class="check-icon"
+          svgIcon="lucide:check"
+        ></mat-icon>
       }
     </span>
   </button>
@@ -170,7 +188,10 @@
       @if (
         customizerService.selectedFilter().type === OPTIONS.filter.types.scheduledDate
       ) {
-        <mat-icon class="check-icon">check</mat-icon>
+        <mat-icon
+          class="check-icon"
+          svgIcon="lucide:check"
+        ></mat-icon>
       }
     </span>
   </button>
@@ -185,7 +206,10 @@
     <span class="menu-item-content">
       <span>{{ T.F.TASK_VIEW.CUSTOMIZER.FILTER_DEADLINE | translate }}</span>
       @if (customizerService.selectedFilter().type === OPTIONS.filter.types.deadline) {
-        <mat-icon class="check-icon">check</mat-icon>
+        <mat-icon
+          class="check-icon"
+          svgIcon="lucide:check"
+        ></mat-icon>
       }
     </span>
   </button>
@@ -202,7 +226,10 @@
       @if (
         customizerService.selectedFilter().type === OPTIONS.filter.types.estimatedTime
       ) {
-        <mat-icon class="check-icon">check</mat-icon>
+        <mat-icon
+          class="check-icon"
+          svgIcon="lucide:check"
+        ></mat-icon>
       }
     </span>
   </button>
@@ -217,7 +244,10 @@
     <span class="menu-item-content">
       <span>{{ T.F.TASK_VIEW.CUSTOMIZER.FILTER_TIME_SPENT | translate }}</span>
       @if (customizerService.selectedFilter().type === OPTIONS.filter.types.timeSpent) {
-        <mat-icon class="check-icon">check</mat-icon>
+        <mat-icon
+          class="check-icon"
+          svgIcon="lucide:check"
+        ></mat-icon>
       }
     </span>
   </button>
@@ -235,7 +265,10 @@
         customizerService.selectedFilter().type === OPTIONS.filter.types.tag &&
         customizerService.selectedFilter().preset === FILTER_COMMON.NOT_SPECIFIED
       ) {
-        <mat-icon class="check-icon">check</mat-icon>
+        <mat-icon
+          class="check-icon"
+          svgIcon="lucide:check"
+        ></mat-icon>
       }
     </span>
   </button>

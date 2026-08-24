@@ -35,7 +35,10 @@
       <mat-card class="error-card">
         <mat-card-header>
           <mat-card-title>
-            <mat-icon color="warn">error</mat-icon>
+            <mat-icon
+              color="warn"
+              svgIcon="lucide:error"
+            ></mat-icon>
             {{ T.PLUGINS.ERROR_LOADING_PLUGIN | translate }}
           </mat-card-title>
         </mat-card-header>
@@ -52,7 +55,7 @@
       </mat-card>
     } @else {
       <div class="simple-error">
-        <mat-icon>error_outline</mat-icon>
+        <mat-icon svgIcon="lucide:error_outline"></mat-icon>
         <p>{{ error() }}</p>
       </div>
     }

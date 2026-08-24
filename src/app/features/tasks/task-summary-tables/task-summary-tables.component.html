@@ -6,7 +6,7 @@
         class="project-title"
       >
         <h3>{{ project.title }}</h3>
-        <mat-icon>timer</mat-icon>
+        <mat-icon svgIcon="lucide:timer"></mat-icon>
         @if (!isShowYesterday()) {
           <div>{{ project.timeSpentToday | msToString }}</div>
         }
@@ -34,7 +34,7 @@
         [title]="T.PDS.ROUND_TIME_SPENT_TITLE | translate"
         mat-button
       >
-        <mat-icon>restore</mat-icon>
+        <mat-icon svgIcon="lucide:restore"></mat-icon>
         {{ T.PDS.ROUND_TIME_SPENT | translate }}
       </button>
       @if (isForToday()) {
@@ -42,7 +42,7 @@
           (click)="showExportModal(project.id)"
           mat-button
         >
-          <mat-icon>call_made</mat-icon>
+          <mat-icon svgIcon="lucide:call_made"></mat-icon>
           {{ T.PDS.EXPORT_TASK_LIST | translate }}
         </button>
       }

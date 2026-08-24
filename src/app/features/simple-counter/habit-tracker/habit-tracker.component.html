@@ -6,7 +6,7 @@
         (click)="prevWeek()"
         [matTooltip]="T.F.SIMPLE_COUNTER.HABIT_TRACKER.PREV_WEEK | translate"
       >
-        <mat-icon>chevron_left</mat-icon>
+        <mat-icon svgIcon="lucide:chevron_left"></mat-icon>
       </button>
       <span class="range-label">{{ dateRangeLabel() }}</span>
       <button
@@ -15,7 +15,7 @@
         [matTooltip]="T.F.SIMPLE_COUNTER.HABIT_TRACKER.NEXT_WEEK | translate"
         [disabled]="dayOffset() >= 0"
       >
-        <mat-icon>chevron_right</mat-icon>
+        <mat-icon svgIcon="lucide:chevron_right"></mat-icon>
       </button>
     </div>
     <div class="nav-controls">
@@ -119,7 +119,7 @@
                 </svg>
               }
               @if (isSimpleCompletion(counter) && getVal(counter, day.str) > 0) {
-                <mat-icon>check</mat-icon>
+                <mat-icon svgIcon="lucide:check"></mat-icon>
               } @else if (getDisplayValue(counter, day.str)) {
                 <span class="value-text">{{ getDisplayValue(counter, day.str) }}</span>
               }
@@ -137,7 +137,7 @@
       (click)="addHabit()"
       class="add-habit-btn"
     >
-      <mat-icon>playlist_add</mat-icon>
+      <mat-icon svgIcon="lucide:playlist_add"></mat-icon>
       <span class="mdc-button__label">{{
         T.F.SIMPLE_COUNTER.HABIT_TRACKER.ADD_HABIT | translate
       }}</span>
@@ -175,21 +175,21 @@
                   (click)="enableHabit(counter.id)"
                   [matTooltip]="T.F.SIMPLE_COUNTER.FORM.L_IS_ENABLED | translate"
                 >
-                  <mat-icon>visibility</mat-icon>
+                  <mat-icon svgIcon="lucide:visibility"></mat-icon>
                 </button>
                 <button
                   mat-icon-button
                   (click)="openEditSettings(counter)"
                   [matTooltip]="T.G.EDIT | translate"
                 >
-                  <mat-icon>edit</mat-icon>
+                  <mat-icon svgIcon="lucide:edit"></mat-icon>
                 </button>
                 <button
                   mat-icon-button
                   (click)="deleteHabit(counter)"
                   [matTooltip]="T.G.DELETE | translate"
                 >
-                  <mat-icon>delete</mat-icon>
+                  <mat-icon svgIcon="lucide:delete"></mat-icon>
                 </button>
               </div>
             </div>

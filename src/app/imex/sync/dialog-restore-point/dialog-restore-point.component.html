@@ -8,18 +8,21 @@
     </div>
   } @else if (error()) {
     <div class="error">
-      <mat-icon>error</mat-icon>
+      <mat-icon svgIcon="lucide:error"></mat-icon>
       <p>{{ error() | translate }}</p>
     </div>
   } @else if (restorePoints().length === 0) {
     <div class="empty">
-      <mat-icon>history</mat-icon>
+      <mat-icon svgIcon="lucide:history"></mat-icon>
       <p>{{ T.F.SYNC.D_RESTORE.NO_POINTS | translate }}</p>
     </div>
   } @else {
     <p class="intro">{{ T.F.SYNC.D_RESTORE.INTRO | translate }}</p>
     <div class="callout callout--warning">
-      <mat-icon aria-hidden="true">warning</mat-icon>
+      <mat-icon
+        aria-hidden="true"
+        svgIcon="lucide:warning"
+      ></mat-icon>
       <p>{{ T.F.SYNC.D_RESTORE.WARNING | translate }}</p>
     </div>
 
@@ -39,7 +42,10 @@
             }
           </div>
           @if (selectedPoint()?.serverSeq === point.serverSeq) {
-            <mat-icon class="selected-icon">check_circle</mat-icon>
+            <mat-icon
+              class="selected-icon"
+              svgIcon="lucide:check_circle"
+            ></mat-icon>
           }
         </div>
       }

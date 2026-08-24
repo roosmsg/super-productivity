@@ -17,7 +17,7 @@
           [attr.aria-label]="T.G.CLEAR | translate"
           (click)="searchTerm.set('')"
         >
-          <mat-icon>close</mat-icon>
+          <mat-icon svgIcon="lucide:close"></mat-icon>
         </button>
       }
     </mat-form-field>
@@ -46,7 +46,10 @@
               <span class="project-title">{{ project.title }}</span>
               @if (project.isDone) {
                 <span class="completed-badge">
-                  <mat-icon aria-hidden="true">emoji_events</mat-icon>
+                  <mat-icon
+                    aria-hidden="true"
+                    svgIcon="lucide:emoji_events"
+                  ></mat-icon>
                   @if (project.doneOn) {
                     {{
                       T.F.PROJECT.COMPLETE.COMPLETED_ON
@@ -63,7 +66,7 @@
                 [attr.aria-label]="T.F.PROJECT.COMPLETE.REOPEN | translate"
                 (click)="reopen(project)"
               >
-                <mat-icon>replay</mat-icon>
+                <mat-icon svgIcon="lucide:replay"></mat-icon>
               </button>
             } @else {
               <button
@@ -72,7 +75,7 @@
                 [attr.aria-label]="T.F.PROJECT.ARCHIVED_PROJECTS.UNARCHIVE | translate"
                 (click)="unarchive(project)"
               >
-                <mat-icon>unarchive</mat-icon>
+                <mat-icon svgIcon="lucide:unarchive"></mat-icon>
               </button>
             }
           </li>

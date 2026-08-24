@@ -21,7 +21,10 @@
           class="task-title"
         >
           @if (task.repeatCfgId) {
-            <mat-icon class="repeat-task-icon">repeat </mat-icon>
+            <mat-icon
+              class="repeat-task-icon"
+              svgIcon="lucide:repeat"
+            ></mat-icon>
           }
           @if (task.parentId) {
             <span>–</span>
@@ -38,7 +41,7 @@
             class="view-details-btn"
             mat-icon-button
           >
-            <mat-icon>info</mat-icon>
+            <mat-icon svgIcon="lucide:info"></mat-icon>
           </button>
         </div>
       </td>
@@ -119,13 +122,13 @@
           <mat-icon
             aria-label="Mark as undone"
             class="undo"
-            >undo
-          </mat-icon>
+            svgIcon="lucide:undo"
+          ></mat-icon>
           <mat-icon
             aria-label="Mark as done"
             class="check"
-            >check
-          </mat-icon>
+            svgIcon="lucide:check"
+          ></mat-icon>
         </button>
       </td>
     </ng-container>

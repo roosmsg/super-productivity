@@ -3,7 +3,7 @@
   color=""
   (click)="addIssue.emit(itemData())"
 >
-  <mat-icon>add</mat-icon>
+  <mat-icon svgIcon="lucide:add"></mat-icon>
 </button>
 
 <div class="title">{{ customTitleStr() || itemData().title }}</div>
@@ -14,7 +14,7 @@
     mat-icon-button
     (click)="openIssue()"
   >
-    <mat-icon>open_in_new</mat-icon>
+    <mat-icon svgIcon="lucide:open_in_new"></mat-icon>
   </button>
 } @else if ($any(itemData().issueData)?.url) {
   <button
@@ -23,6 +23,6 @@
     [title]="T.G.OPEN_IN_BROWSER | translate"
     (click)="openCalendarEventUrl()"
   >
-    <mat-icon>open_in_new</mat-icon>
+    <mat-icon svgIcon="lucide:open_in_new"></mat-icon>
   </button>
 }

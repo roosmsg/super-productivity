@@ -15,7 +15,10 @@
         >
           <div class="icon-wrapper">
             <mat-icon class="preset-icon">{{ preset.icon }}</mat-icon>
-            <mat-icon class="check-icon">check_circle</mat-icon>
+            <mat-icon
+              class="check-icon"
+              svgIcon="lucide:check_circle"
+            ></mat-icon>
           </div>
           <div class="card-text">
             <h2>{{ preset.titleKey | translate }}</h2>
@@ -25,7 +28,10 @@
       }
     </div>
     <p class="footer-hint">
-      <mat-icon class="lock-icon">lock</mat-icon>
+      <mat-icon
+        class="lock-icon"
+        svgIcon="lucide:lock"
+      ></mat-icon>
       {{ 'ONBOARDING.PRIVACY_HINT' | translate }}
     </p>
     <p class="sync-cta">

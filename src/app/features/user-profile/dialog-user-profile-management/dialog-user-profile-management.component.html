@@ -20,7 +20,7 @@
         (click)="createProfile()"
         [disabled]="!newProfileName() || isCreating()"
       >
-        <mat-icon>add</mat-icon>
+        <mat-icon svgIcon="lucide:add"></mat-icon>
         {{ T.USER_PROFILES.CREATE | translate }}
       </button>
     </div>
@@ -51,14 +51,14 @@
                 (click)="saveEdit(profile.id)"
                 [matTooltip]="T.USER_PROFILES.SAVE | translate"
               >
-                <mat-icon>check</mat-icon>
+                <mat-icon svgIcon="lucide:check"></mat-icon>
               </button>
               <button
                 mat-icon-button
                 (click)="cancelEdit()"
                 [matTooltip]="T.USER_PROFILES.CANCEL | translate"
               >
-                <mat-icon>close</mat-icon>
+                <mat-icon svgIcon="lucide:close"></mat-icon>
               </button>
             </div>
           } @else {
@@ -84,14 +84,14 @@
                 [matTooltip]="T.USER_PROFILES.RENAME | translate"
                 [disabled]="profileService.profiles().length === 1"
               >
-                <mat-icon>edit</mat-icon>
+                <mat-icon svgIcon="lucide:edit"></mat-icon>
               </button>
               <button
                 mat-icon-button
                 (click)="exportProfile(profile)"
                 [matTooltip]="T.USER_PROFILES.EXPORT_PROFILE | translate"
               >
-                <mat-icon>download</mat-icon>
+                <mat-icon svgIcon="lucide:download"></mat-icon>
               </button>
               <button
                 mat-icon-button
@@ -103,7 +103,7 @@
                 "
                 color="warn"
               >
-                <mat-icon>delete</mat-icon>
+                <mat-icon svgIcon="lucide:delete"></mat-icon>
               </button>
             </div>
           }

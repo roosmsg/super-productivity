@@ -9,7 +9,7 @@
       color="accent"
       mat-icon-button
     >
-      <mat-icon>pause</mat-icon>
+      <mat-icon svgIcon="lucide:pause"></mat-icon>
     </button>
   } @else {
     <button
@@ -21,7 +21,10 @@
       color=""
       mat-icon-button
     >
-      <mat-icon class="play-icon">play_arrow</mat-icon>
+      <mat-icon
+        class="play-icon"
+        svgIcon="lucide:play_arrow"
+      ></mat-icon>
     </button>
   }
 }
@@ -35,7 +38,7 @@
     color=""
     mat-icon-button
   >
-    <mat-icon>wb_sunny</mat-icon>
+    <mat-icon svgIcon="lucide:wb_sunny"></mat-icon>
   </button>
 }
 @if (isShowRemoveFromToday()) {
@@ -46,7 +49,7 @@
     color=""
     mat-icon-button
   >
-    <mat-icon>timer_off</mat-icon>
+    <mat-icon svgIcon="lucide:timer_off"></mat-icon>
   </button>
 }
 @if (
@@ -67,12 +70,15 @@
     mat-icon-button
   >
     @if (!task().issueWasUpdated) {
-      <mat-icon>right_panel_open</mat-icon>
+      <mat-icon svgIcon="lucide:right_panel_open"></mat-icon>
     }
-    <!--            <mat-icon *ngIf="!task().issueWasUpdated">toc</mat-icon>-->
-    <!--            <mat-icon *ngIf="!task().issueWasUpdated">chevron_right</mat-icon>-->
+    <!--            <mat-icon *ngIf="!task().issueWasUpdated" svgIcon="lucide:toc"></mat-icon>-->
+    <!--            <mat-icon *ngIf="!task().issueWasUpdated" svgIcon="lucide:chevron_right"></mat-icon>-->
     @if (task().issueWasUpdated) {
-      <mat-icon color="accent">update</mat-icon>
+      <mat-icon
+        color="accent"
+        svgIcon="lucide:update"
+      ></mat-icon>
     }
   </button>
 }

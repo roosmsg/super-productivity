@@ -32,7 +32,7 @@
       [matTooltip]="T.F.TASK.D_SCHEDULE_TASK.QA_TODAY | translate"
       [attr.aria-label]="T.F.TASK.D_SCHEDULE_TASK.QA_TODAY | translate"
     >
-      <mat-icon>wb_sunny</mat-icon>
+      <mat-icon svgIcon="lucide:wb_sunny"></mat-icon>
     </button>
 
     <button
@@ -42,7 +42,7 @@
       [matTooltip]="T.F.TASK.D_SCHEDULE_TASK.QA_TOMORROW | translate"
       [attr.aria-label]="T.F.TASK.D_SCHEDULE_TASK.QA_TOMORROW | translate"
     >
-      <mat-icon>wb_twilight</mat-icon>
+      <mat-icon svgIcon="lucide:wb_twilight"></mat-icon>
     </button>
     <button
       mat-icon-button
@@ -51,7 +51,7 @@
       [matTooltip]="T.F.TASK.D_SCHEDULE_TASK.QA_NEXT_WEEK | translate"
       [attr.aria-label]="T.F.TASK.D_SCHEDULE_TASK.QA_NEXT_WEEK | translate"
     >
-      <mat-icon>next_week</mat-icon>
+      <mat-icon svgIcon="lucide:next_week"></mat-icon>
     </button>
     <!--      <button-->
     <!--        mat-icon-button-->
@@ -59,7 +59,7 @@
     <!--        (click)="quickAccessBtnClick(3)"-->
     <!--        [matTooltip]="(T.F.TASK.D_SCHEDULE_TASK.QA_NEXT_MONTH|translate)"-->
     <!--      >-->
-    <!--        <mat-icon>bedtime</mat-icon>-->
+    <!--        <mat-icon svgIcon="lucide:bedtime"></mat-icon>-->
     <!--      </button>-->
     <button
       mat-icon-button
@@ -77,7 +77,7 @@
       "
       (click)="scheduleTask()"
     >
-      <mat-icon>today</mat-icon>
+      <mat-icon svgIcon="lucide:today"></mat-icon>
     </button>
 
     @if (task.dueWithTime || task.dueDay) {
@@ -88,7 +88,7 @@
         [matTooltip]="T.F.TASK.CMP.UNSCHEDULE_TASK | translate"
         [attr.aria-label]="T.F.TASK.CMP.UNSCHEDULE_TASK | translate"
       >
-        <mat-icon>event_busy</mat-icon>
+        <mat-icon svgIcon="lucide:event_busy"></mat-icon>
       </button>
     }
   </div>
@@ -105,7 +105,10 @@
       mat-menu-item
     >
       <span class="menuItemLeft">
-        <mat-icon class="play-icon">play_arrow</mat-icon>
+        <mat-icon
+          class="play-icon"
+          svgIcon="lucide:play_arrow"
+        ></mat-icon>
         {{ T.F.TASK.CMP.TRACK_TIME | translate }}
       </span>
       <span class="key-i">{{ kb.togglePlay }}</span>
@@ -122,7 +125,7 @@
       mat-menu-item
     >
       <span class="menuItemLeft">
-        <mat-icon>center_focus_strong</mat-icon>
+        <mat-icon svgIcon="lucide:center_focus_strong"></mat-icon>
         {{ T.F.TASK.CMP.FOCUS_SESSION | translate }}
       </span>
       <!--    <span class="key-i">{{ kb.goToFocusMode }}</span>-->
@@ -140,7 +143,7 @@
       mat-menu-item
     >
       <span class="menuItemLeft">
-        <mat-icon>pause</mat-icon>
+        <mat-icon svgIcon="lucide:pause"></mat-icon>
         {{ T.F.TASK.CMP.TRACK_TIME_STOP | translate }}
       </span>
       <span class="key-i">{{ kb.togglePlay }}</span>
@@ -153,9 +156,9 @@
     >
       <span class="menuItemLeft">
         @if (task.isDone) {
-          <mat-icon>undo</mat-icon>
+          <mat-icon svgIcon="lucide:undo"></mat-icon>
         } @else {
-          <mat-icon>check</mat-icon>
+          <mat-icon svgIcon="lucide:check"></mat-icon>
         }
         {{
           (task.isDone ? T.F.TASK.CMP.MARK_UNDONE : T.F.TASK.CMP.MARK_DONE) | translate
@@ -171,7 +174,7 @@
       mat-menu-item
     >
       <span class="menuItemLeft">
-        <mat-icon>arrow_upward</mat-icon>
+        <mat-icon svgIcon="lucide:arrow_upward"></mat-icon>
         {{ T.F.TASK.CMP.MOVE_TO_TOP | translate }}
       </span>
       <span class="key-i">{{ kb.moveTaskToTop }}</span>
@@ -181,7 +184,7 @@
       mat-menu-item
     >
       <span class="menuItemLeft">
-        <mat-icon>arrow_downward</mat-icon>
+        <mat-icon svgIcon="lucide:arrow_downward"></mat-icon>
         {{ T.F.TASK.CMP.MOVE_TO_BOTTOM | translate }}
       </span>
       <span class="key-i">{{ kb.moveTaskToBottom }}</span>
@@ -193,7 +196,7 @@
       mat-menu-item
     >
       <span class="menuItemLeft">
-        <mat-icon>playlist_add</mat-icon>
+        <mat-icon svgIcon="lucide:playlist_add"></mat-icon>
         {{ T.F.TASK.CMP.ADD_SUB_TASK | translate }}
       </span>
       <span class="key-i">{{ kb.taskAddSubTask }}</span>
@@ -207,7 +210,7 @@
       mat-menu-item
     >
       <span class="menuItemLeft">
-        <mat-icon>file_copy</mat-icon>
+        <mat-icon svgIcon="lucide:file_copy"></mat-icon>
         {{ T.F.TASK.CMP.DUPLICATE | translate }}
       </span>
     </button>
@@ -246,7 +249,7 @@
       mat-menu-item
     >
       <span class="menuItemLeft">
-        <mat-icon>move_down</mat-icon>
+        <mat-icon svgIcon="lucide:move_down"></mat-icon>
         {{ T.F.TASK.CMP.MOVE_TO_BACKLOG | translate }}
       </span>
       <span class="key-i">{{ kb.moveToBacklog }}</span>
@@ -264,7 +267,7 @@
       mat-menu-item
     >
       <span class="menuItemLeft">
-        <mat-icon>move_up</mat-icon>
+        <mat-icon svgIcon="lucide:move_up"></mat-icon>
         {{ T.F.TASK.CMP.MOVE_TO_REGULAR | translate }}
       </span>
       <!-- No shortcut hint: taskScheduleToday (Shift+T) schedules for today and
@@ -281,7 +284,7 @@
       [menuTouchFix]="estimateMenuTrigger"
     >
       <span class="menuItemLeft">
-        <mat-icon>hourglass_empty</mat-icon>
+        <mat-icon svgIcon="lucide:hourglass_empty"></mat-icon>
         {{ T.F.TASK.CMP.ESTIMATE | translate }}
       </span>
       <span class="key-i">{{ kb.taskOpenEstimationDialog }}</span>
@@ -297,7 +300,7 @@
     class="e2e-edit-tags-btn"
   >
     <span class="menuItemLeft">
-      <mat-icon>label</mat-icon>
+      <mat-icon svgIcon="lucide:label"></mat-icon>
       {{ T.F.TASK.CMP.TOGGLE_TAGS | translate }}
     </span>
     <span class="key-i">{{ kb.taskEditTags }}</span>
@@ -312,7 +315,7 @@
       (menuOpened)="focusFirstSubmenuItem(projectMenu)"
     >
       <span class="menuItemLeft">
-        <mat-icon>forward</mat-icon>
+        <mat-icon svgIcon="lucide:forward"></mat-icon>
         {{
           (task.projectId
             ? T.F.TASK.CMP.MOVE_TO_OTHER_PROJECT
@@ -328,7 +331,7 @@
       (click)="convertToMainTask()"
       mat-menu-item
     >
-      <mat-icon>subdirectory_arrow_left</mat-icon>
+      <mat-icon svgIcon="lucide:subdirectory_arrow_left"></mat-icon>
       {{ T.F.TASK.CMP.CONVERT_TO_PARENT_TASK | translate }}
     </button>
   }
@@ -339,7 +342,10 @@
     mat-menu-item
   >
     <span class="menuItemLeft">
-      <mat-icon class="color-warn-i">delete_forever</mat-icon>
+      <mat-icon
+        class="color-warn-i"
+        svgIcon="lucide:delete_forever"
+      ></mat-icon>
       {{
         (task.repeatCfgId ? T.F.TASK.CMP.DELETE_REPEAT_INSTANCE : T.F.TASK.CMP.DELETE)
           | translate
@@ -358,7 +364,7 @@
         (click)="setEstimate(option.ms)"
       >
         @if (option.ms === task.timeEstimate) {
-          <mat-icon>check</mat-icon>
+          <mat-icon svgIcon="lucide:check"></mat-icon>
         }
         {{ option.label }}
       </button>
@@ -369,7 +375,7 @@
       menuTouchFix
       (click)="estimateTime()"
     >
-      <mat-icon>tune</mat-icon>
+      <mat-icon svgIcon="lucide:tune"></mat-icon>
       {{ T.F.TASK.CMP.CUSTOM_ESTIMATE | translate }}
     </button>
     @if (task.timeEstimate > 0) {
@@ -378,7 +384,7 @@
         menuTouchFix
         (click)="setEstimate(0)"
       >
-        <mat-icon>clear</mat-icon>
+        <mat-icon svgIcon="lucide:clear"></mat-icon>
         {{ T.F.TASK.CMP.CLEAR_ESTIMATE | translate }}
       </button>
     }
@@ -433,7 +439,7 @@
       (click)="openAddNewTag()"
       menuTouchFix
     >
-      <mat-icon>add</mat-icon>
+      <mat-icon svgIcon="lucide:add"></mat-icon>
       {{ T.F.TAG.TTL.ADD_NEW_TAG | translate }}
     </button>
   </ng-template>

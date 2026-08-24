@@ -9,7 +9,10 @@
 @if (!canProceed()) {
   <mat-dialog-content>
     <div class="callout callout--info">
-      <mat-icon aria-hidden="true">info</mat-icon>
+      <mat-icon
+        aria-hidden="true"
+        svgIcon="lucide:info"
+      ></mat-icon>
       <div>
         <p>{{ errorReason() | translate }}</p>
       </div>
@@ -29,7 +32,10 @@
   <!-- Simplified dialog for initial SuperSync setup -->
   <mat-dialog-content>
     <div class="callout callout--info">
-      <mat-icon aria-hidden="true">enhanced_encryption</mat-icon>
+      <mat-icon
+        aria-hidden="true"
+        svgIcon="lucide:enhanced_encryption"
+      ></mat-icon>
       <div>
         <p [innerHTML]="textKeys.ENCRYPTION_SETUP_INTRO | translate"></p>
         <p>{{ textKeys.SETUP_ENCRYPTION_PASSWORD_WARNING | translate }}</p>
@@ -76,7 +82,10 @@
 
       @if (passwordError) {
         <div class="password-error">
-          <mat-icon aria-hidden="true">error</mat-icon>
+          <mat-icon
+            aria-hidden="true"
+            svgIcon="lucide:error"
+          ></mat-icon>
           <span>{{ passwordError | translate }}</span>
         </div>
       }
@@ -121,7 +130,10 @@
         ></mat-spinner>
       } @else {
         <ng-container>
-          <mat-icon aria-hidden="true">lock</mat-icon>
+          <mat-icon
+            aria-hidden="true"
+            svgIcon="lucide:lock"
+          ></mat-icon>
           {{ textKeys.SETUP_ENCRYPTION_BTN | translate }}
         </ng-container>
       }
@@ -131,7 +143,10 @@
   <!-- Full dialog for enabling encryption on existing setup -->
   <mat-dialog-content>
     <div class="callout callout--warning">
-      <mat-icon aria-hidden="true">warning</mat-icon>
+      <mat-icon
+        aria-hidden="true"
+        svgIcon="lucide:warning"
+      ></mat-icon>
       <p>{{ textKeys.ENABLE_ENCRYPTION_WARNING | translate }}</p>
     </div>
 
@@ -173,7 +188,10 @@
 
       @if (passwordError) {
         <div class="password-error">
-          <mat-icon aria-hidden="true">error</mat-icon>
+          <mat-icon
+            aria-hidden="true"
+            svgIcon="lucide:error"
+          ></mat-icon>
           <span>{{ passwordError | translate }}</span>
         </div>
       }
@@ -189,7 +207,10 @@
     </div>
 
     <p class="note">
-      <mat-icon aria-hidden="true">info</mat-icon>
+      <mat-icon
+        aria-hidden="true"
+        svgIcon="lucide:info"
+      ></mat-icon>
       <span>{{ textKeys.ENABLE_ENCRYPTION_NOTE | translate }}</span>
     </p>
   </mat-dialog-content>
@@ -217,7 +238,10 @@
         ></mat-spinner>
       } @else {
         <ng-container>
-          <mat-icon aria-hidden="true">lock</mat-icon>
+          <mat-icon
+            aria-hidden="true"
+            svgIcon="lucide:lock"
+          ></mat-icon>
           {{ textKeys.BTN_ENABLE_ENCRYPTION | translate }}
         </ng-container>
       }

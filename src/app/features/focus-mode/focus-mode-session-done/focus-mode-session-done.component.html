@@ -26,7 +26,7 @@
     mat-stroked-button
     (click)="cancelAndCloseFocusOverlay()"
   >
-    <mat-icon>arrow_back</mat-icon>
+    <mat-icon svgIcon="lucide:arrow_back"></mat-icon>
     {{ T.F.FOCUS_MODE.BACK_TO_PLANNING | translate }}
   </button>
 
@@ -35,7 +35,7 @@
     color="primary"
     (click)="currentTask() ? continueWithFocusSession() : startNextFocusSession()"
   >
-    <mat-icon>arrow_forward</mat-icon>
+    <mat-icon svgIcon="lucide:arrow_forward"></mat-icon>
     {{ T.F.FOCUS_MODE.START_NEXT_FOCUS_SESSION | translate }}
   </button>
 </div>

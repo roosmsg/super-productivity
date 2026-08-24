@@ -47,7 +47,7 @@
         (click)="toggleChecklistMode($event)"
         mat-icon-button
       >
-        <mat-icon>checklist</mat-icon>
+        <mat-icon svgIcon="lucide:checklist"></mat-icon>
       </button>
     }
     @if (isCurrentlyChecklist()) {
@@ -57,28 +57,28 @@
         (mousedown)="$event.preventDefault()"
         mat-icon-button
       >
-        <mat-icon>playlist_add_check</mat-icon>
+        <mat-icon svgIcon="lucide:playlist_add_check"></mat-icon>
       </button>
       <mat-menu #checklistMenu="matMenu">
         <button
           (click)="checkAllChecklistItems()"
           mat-menu-item
         >
-          <mat-icon>done_all</mat-icon>
+          <mat-icon svgIcon="lucide:done_all"></mat-icon>
           {{ T.F.TASK.ADDITIONAL_INFO.CHECK_ALL | translate }}
         </button>
         <button
           (click)="uncheckAllChecklistItems()"
           mat-menu-item
         >
-          <mat-icon>remove_done</mat-icon>
+          <mat-icon svgIcon="lucide:remove_done"></mat-icon>
           {{ T.F.TASK.ADDITIONAL_INFO.UNCHECK_ALL | translate }}
         </button>
         <button
           (click)="clearCompletedChecklistItems()"
           mat-menu-item
         >
-          <mat-icon>delete_sweep</mat-icon>
+          <mat-icon svgIcon="lucide:delete_sweep"></mat-icon>
           {{ T.F.TASK.ADDITIONAL_INFO.CLEAR_COMPLETED | translate }}
         </button>
       </mat-menu>
@@ -89,7 +89,7 @@
       (click)="openFullScreen()"
       mat-icon-button
     >
-      <mat-icon>fullscreen</mat-icon>
+      <mat-icon svgIcon="lucide:fullscreen"></mat-icon>
     </button>
   </div>
 }

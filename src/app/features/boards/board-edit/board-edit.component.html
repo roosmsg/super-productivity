@@ -12,7 +12,10 @@
         (click)="removeBoard()"
         mat-button
       >
-        <mat-icon class="color-warn-i">delete_forever</mat-icon>
+        <mat-icon
+          class="color-warn-i"
+          svgIcon="lucide:delete_forever"
+        ></mat-icon>
         <span class="text">{{ T.G.DELETE | translate }}</span>
       </button>
     }
@@ -24,7 +27,7 @@
       mat-flat-button
       type="submit"
     >
-      <mat-icon>save</mat-icon>
+      <mat-icon svgIcon="lucide:save"></mat-icon>
       {{ T.G.SAVE | translate }}
     </button>
   </div>

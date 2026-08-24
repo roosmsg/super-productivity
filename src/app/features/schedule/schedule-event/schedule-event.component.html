@@ -16,14 +16,14 @@
         <mat-icon
           class="ico"
           inline="true"
-          >alarm
-        </mat-icon>
+          svgIcon="lucide:alarm"
+        ></mat-icon>
       } @else {
         <mat-icon
           class="ico"
           inline="true"
-          >schedule
-        </mat-icon>
+          svgIcon="lucide:schedule"
+        ></mat-icon>
       }
     }
     @case ('FLOW') {
@@ -31,15 +31,15 @@
       <mat-icon
         class="ico"
         inline="true"
-        >wb_sunny
-      </mat-icon>
+        svgIcon="lucide:wb_sunny"
+      ></mat-icon>
     }
     @case ('LUNCH_BREAK') {
       <mat-icon
         class="ico"
         inline="true"
-        >restaurant
-      </mat-icon>
+        svgIcon="lucide:restaurant"
+      ></mat-icon>
     }
     @case ('CAL_PROJECTION') {
       <mat-icon
@@ -109,7 +109,7 @@
         mat-menu-item
         (click)="openCalendarEventLink()"
       >
-        <mat-icon>open_in_new</mat-icon>
+        <mat-icon svgIcon="lucide:open_in_new"></mat-icon>
         {{ T.F.CALENDARS.CONTEXT_MENU.OPEN_IN_CALENDAR | translate }}
       </button>
     }
@@ -118,7 +118,7 @@
         mat-menu-item
         (click)="rescheduleCalendarEvent()"
       >
-        <mat-icon>schedule</mat-icon>
+        <mat-icon svgIcon="lucide:schedule"></mat-icon>
         {{ T.F.CALENDARS.CONTEXT_MENU.RESCHEDULE | translate }}
       </button>
     }
@@ -127,14 +127,14 @@
         mat-menu-item
         (click)="createCalendarEventAsTask()"
       >
-        <mat-icon>add</mat-icon>
+        <mat-icon svgIcon="lucide:add"></mat-icon>
         {{ T.F.CALENDARS.CONTEXT_MENU.CREATE_TASK | translate }}
       </button>
       <button
         mat-menu-item
         (click)="hideCalendarEvent()"
       >
-        <mat-icon>visibility_off</mat-icon>
+        <mat-icon svgIcon="lucide:visibility_off"></mat-icon>
         {{ T.G.HIDE | translate }}
       </button>
     }
@@ -143,7 +143,10 @@
         mat-menu-item
         (click)="deleteCalendarEvent()"
       >
-        <mat-icon color="warn">delete</mat-icon>
+        <mat-icon
+          color="warn"
+          svgIcon="lucide:delete"
+        ></mat-icon>
         {{ T.F.CALENDARS.CONTEXT_MENU.DELETE_EVENT | translate }}
       </button>
     }

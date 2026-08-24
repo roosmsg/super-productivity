@@ -301,6 +301,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "^2.2.0",
     "karma-spec-reporter": "^0.0.36",
+    "lucide-static": "^1.33.0",
     "marked": "^18.0.5",
     "nanoid": "^5.1.11",
     "new-github-issue-url": "^1.1.0",

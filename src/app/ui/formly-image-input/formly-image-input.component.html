@@ -23,7 +23,7 @@
       [disabled]="props.readonly || isPickerBusy()"
       class="select-button"
     >
-      <mat-icon>folder_open</mat-icon>
+      <mat-icon svgIcon="lucide:folder_open"></mat-icon>
       {{ T.F.PROJECT.FORM_THEME.BTN_SELECT_IMAGE | translate }}
     </button>
   }
@@ -35,7 +35,7 @@
       [disabled]="props.readonly || !isUnsplashAvailable"
       class="unsplash-button"
     >
-      <mat-icon>image</mat-icon>
+      <mat-icon svgIcon="lucide:image"></mat-icon>
       Load from Unsplash
     </button>
   }

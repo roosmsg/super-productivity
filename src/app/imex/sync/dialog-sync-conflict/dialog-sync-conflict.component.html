@@ -158,7 +158,7 @@
       [color]="isHighlightRemote && isHighlightRemoteChanges ? 'primary' : ''"
       mat-stroked-button
     >
-      <mat-icon>file_download</mat-icon>
+      <mat-icon svgIcon="lucide:file_download"></mat-icon>
       {{ T.F.SYNC.D_CONFLICT.USE_REMOTE | translate }}
     </button>
     <button
@@ -166,7 +166,7 @@
       [color]="isHighlightLocal && isHighlightLocalChanges ? 'primary' : ''"
       mat-stroked-button
     >
-      <mat-icon>file_upload</mat-icon>
+      <mat-icon svgIcon="lucide:file_upload"></mat-icon>
       {{ T.F.SYNC.D_CONFLICT.USE_LOCAL | translate }}
     </button>
   </div>

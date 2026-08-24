@@ -61,7 +61,10 @@
                     (ngModelChange)="updateSession(session.index, $event)"
                     [name]="'session-' + session.index"
                   />
-                  <mat-icon matPrefix>timer</mat-icon>
+                  <mat-icon
+                    matPrefix
+                    svgIcon="lucide:timer"
+                  ></mat-icon>
                 </mat-form-field>
                 <button
                   mat-icon-button
@@ -70,7 +73,7 @@
                   (click)="deleteSession(session.index)"
                   [attr.aria-label]="T.G.DELETE"
                 >
-                  <mat-icon>delete</mat-icon>
+                  <mat-icon svgIcon="lucide:delete"></mat-icon>
                 </button>
               </div>
             </mat-list-item>
@@ -93,7 +96,10 @@
             name="newSession"
             [(ngModel)]="newSessionDuration"
           />
-          <mat-icon matPrefix>add</mat-icon>
+          <mat-icon
+            matPrefix
+            svgIcon="lucide:add"
+          ></mat-icon>
         </mat-form-field>
         <button
           mat-stroked-button
@@ -101,7 +107,7 @@
           (click)="addSession()"
           [disabled]="newSessionDuration() <= 0"
         >
-          <mat-icon>add</mat-icon>
+          <mat-icon svgIcon="lucide:add"></mat-icon>
           {{ T.F.METRIC.FOCUS_SESSION_DIALOG.ADD_BTN | translate }}
         </button>
       </div>
@@ -121,7 +127,7 @@
       color="primary"
       type="submit"
     >
-      <mat-icon>save</mat-icon>
+      <mat-icon svgIcon="lucide:save"></mat-icon>
       {{ T.G.SAVE | translate }}
     </button>
   </mat-dialog-actions>

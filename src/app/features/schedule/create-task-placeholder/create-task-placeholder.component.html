@@ -3,17 +3,17 @@
   (click)="isForDayMode.set(!isForDayMode())"
 >
   @if (!isForDayMode()) {
-    <mat-icon>alarm</mat-icon>
+    <mat-icon svgIcon="lucide:alarm"></mat-icon>
     <span [innerHTML]="due() | shortTimeHtml"></span>
   } @else {
-    <mat-icon>today</mat-icon>
+    <mat-icon svgIcon="lucide:today"></mat-icon>
     <span>{{ date() | localeDate: 'shortDate' : undefined : locale() }} </span>
   }
 </div>
 
 @if (!isEditMode()) {
   <div class="msg">
-    <mat-icon>add</mat-icon>
+    <mat-icon svgIcon="lucide:add"></mat-icon>
     {{ T.F.SCHEDULE.CLICK_TO_CREATE_TASK | translate }}
   </div>
 } @else {

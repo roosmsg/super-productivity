@@ -45,7 +45,7 @@
           "
           aria-label="Bold"
         >
-          <mat-icon>format_bold</mat-icon>
+          <mat-icon svgIcon="lucide:format_bold"></mat-icon>
         </button>
         <button
           mat-icon-button
@@ -57,7 +57,7 @@
           "
           aria-label="Italic"
         >
-          <mat-icon>format_italic</mat-icon>
+          <mat-icon svgIcon="lucide:format_italic"></mat-icon>
         </button>
         <button
           mat-icon-button
@@ -69,7 +69,7 @@
           "
           aria-label="Strikethrough"
         >
-          <mat-icon>strikethrough_s</mat-icon>
+          <mat-icon svgIcon="lucide:strikethrough_s"></mat-icon>
         </button>
 
         <span class="toolbar-divider"></span>
@@ -84,7 +84,7 @@
           "
           aria-label="Bulleted list"
         >
-          <mat-icon>format_list_bulleted</mat-icon>
+          <mat-icon svgIcon="lucide:format_list_bulleted"></mat-icon>
         </button>
         <button
           mat-icon-button
@@ -96,7 +96,7 @@
           "
           aria-label="Numbered list"
         >
-          <mat-icon>format_list_numbered</mat-icon>
+          <mat-icon svgIcon="lucide:format_list_numbered"></mat-icon>
         </button>
         <button
           mat-icon-button
@@ -105,7 +105,7 @@
           [matTooltip]="T.F.NOTE.D_FULLSCREEN.TOOLBAR.TASK_LIST | translate"
           aria-label="Task list"
         >
-          <mat-icon>checklist</mat-icon>
+          <mat-icon svgIcon="lucide:checklist"></mat-icon>
         </button>
 
         <span class="toolbar-divider"></span>
@@ -120,7 +120,7 @@
           "
           aria-label="Quote"
         >
-          <mat-icon>format_quote</mat-icon>
+          <mat-icon svgIcon="lucide:format_quote"></mat-icon>
         </button>
         <button
           mat-icon-button
@@ -132,7 +132,7 @@
           "
           aria-label="Inline code"
         >
-          <mat-icon>code</mat-icon>
+          <mat-icon svgIcon="lucide:code"></mat-icon>
         </button>
         <button
           mat-icon-button
@@ -141,7 +141,7 @@
           [matTooltip]="T.F.NOTE.D_FULLSCREEN.TOOLBAR.CODE_BLOCK | translate"
           aria-label="Code block"
         >
-          <mat-icon>integration_instructions</mat-icon>
+          <mat-icon svgIcon="lucide:integration_instructions"></mat-icon>
         </button>
 
         <span class="toolbar-divider"></span>
@@ -156,7 +156,7 @@
           "
           aria-label="Insert link"
         >
-          <mat-icon>link</mat-icon>
+          <mat-icon svgIcon="lucide:link"></mat-icon>
         </button>
         <button
           mat-icon-button
@@ -165,7 +165,7 @@
           [matTooltip]="T.F.NOTE.D_FULLSCREEN.TOOLBAR.INSERT_IMAGE | translate"
           aria-label="Insert image"
         >
-          <mat-icon>image</mat-icon>
+          <mat-icon svgIcon="lucide:image"></mat-icon>
         </button>
         <button
           mat-icon-button
@@ -174,7 +174,7 @@
           [matTooltip]="T.F.NOTE.D_FULLSCREEN.TOOLBAR.INSERT_TABLE | translate"
           aria-label="Insert table"
         >
-          <mat-icon>table_chart</mat-icon>
+          <mat-icon svgIcon="lucide:table_chart"></mat-icon>
         </button>
 
         <span class="toolbar-divider"></span>
@@ -186,7 +186,7 @@
           [matTooltip]="T.F.NOTE.D_FULLSCREEN.TOOLBAR.KEYBOARD_SHORTCUTS | translate"
           [aria-label]="T.F.NOTE.D_FULLSCREEN.TOOLBAR.KEYBOARD_SHORTCUTS | translate"
         >
-          <mat-icon>keyboard</mat-icon>
+          <mat-icon svgIcon="lucide:keyboard"></mat-icon>
         </button>
       </div>
 
@@ -220,19 +220,19 @@
       <mat-button-toggle
         value="TEXT_ONLY"
         [matTooltip]="T.F.NOTE.D_FULLSCREEN.VIEW_TEXT_ONLY | translate"
-        ><mat-icon>notes</mat-icon></mat-button-toggle
-      >
+        ><mat-icon svgIcon="lucide:notes"></mat-icon
+      ></mat-button-toggle>
       <mat-button-toggle
         value="SPLIT"
         class="hide-xs"
         [matTooltip]="T.F.NOTE.D_FULLSCREEN.VIEW_SPLIT | translate"
-        ><mat-icon>vertical_split</mat-icon></mat-button-toggle
-      >
+        ><mat-icon svgIcon="lucide:vertical_split"></mat-icon
+      ></mat-button-toggle>
       <mat-button-toggle
         value="PARSED"
         [matTooltip]="T.F.NOTE.D_FULLSCREEN.VIEW_PARSED | translate"
-        ><mat-icon>photo</mat-icon></mat-button-toggle
-      >
+        ><mat-icon svgIcon="lucide:photo"></mat-icon
+      ></mat-button-toggle>
     </mat-button-toggle-group>
   </div>
 
@@ -241,7 +241,7 @@
     (click)="close(true)"
     mat-button
   >
-    <mat-icon>close</mat-icon>
+    <mat-icon svgIcon="lucide:close"></mat-icon>
     {{ T.G.DISCARD | translate }}
   </button>
 
@@ -251,7 +251,7 @@
     color="primary"
     mat-stroked-button
   >
-    <mat-icon>save</mat-icon>
+    <mat-icon svgIcon="lucide:save"></mat-icon>
     {{ T.G.SAVE | translate }}
   </button>
 </div>

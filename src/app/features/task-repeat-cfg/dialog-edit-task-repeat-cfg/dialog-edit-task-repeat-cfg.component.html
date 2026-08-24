@@ -3,7 +3,7 @@
   class="dialog-help-wrapper"
 >
   <h1 mat-dialog-title>
-    <mat-icon>repeat</mat-icon>
+    <mat-icon svgIcon="lucide:repeat"></mat-icon>
     {{
       isEdit()
         ? (T.F.TASK_REPEAT.D_EDIT.EDIT | translate)
@@ -33,13 +33,16 @@
           (click)="openScheduleDialog()"
         >
           <span class="planned-start-date-btn-content">
-            <mat-icon>today</mat-icon>
+            <mat-icon svgIcon="lucide:today"></mat-icon>
             <span class="planned-date-label">
               {{ T.F.TASK_REPEAT.F.START_DATE | translate }}:
             </span>
             <span class="planned-date-val">{{ plannedStartDateStr() }}</span>
             @if (repeatCfg().remindAt && repeatCfg().remindAt !== 'DoNotRemind') {
-              <mat-icon class="reminder-badge">alarm</mat-icon>
+              <mat-icon
+                class="reminder-badge"
+                svgIcon="lucide:alarm"
+              ></mat-icon>
             }
           </span>
         </button>
@@ -90,7 +93,10 @@
       mat-button
       type="button"
     >
-      <mat-icon class="show-on-small">close</mat-icon>
+      <mat-icon
+        class="show-on-small"
+        svgIcon="lucide:close"
+      ></mat-icon>
       <span class="hide-on-small">{{ T.G.CANCEL | translate }}</span>
     </button>
 
@@ -104,7 +110,7 @@
           mat-stroked-button
           type="button"
         >
-          <mat-icon>event_busy</mat-icon>
+          <mat-icon svgIcon="lucide:event_busy"></mat-icon>
           <span class="hide-on-small">{{ skipInstanceButtonText() }}</span>
         </button>
       }
@@ -116,7 +122,7 @@
         mat-stroked-button
         type="button"
       >
-        <mat-icon>delete_forever</mat-icon>
+        <mat-icon svgIcon="lucide:delete_forever"></mat-icon>
         <span class="hide-on-small">{{ T.G.REMOVE | translate }}</span>
       </button>
     }
@@ -135,7 +141,7 @@
       mat-flat-button
       type="submit"
     >
-      <mat-icon>save</mat-icon>
+      <mat-icon svgIcon="lucide:save"></mat-icon>
       <span class="hide-on-small">{{ T.G.SAVE | translate }}</span>
     </button>
   </mat-dialog-actions>

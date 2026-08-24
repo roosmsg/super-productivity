@@ -68,7 +68,10 @@
       [attr.cdkFocusInitial]="isIncomingImport ? '' : null"
       mat-stroked-button
     >
-      <mat-icon aria-hidden="true">cloud_download</mat-icon>
+      <mat-icon
+        aria-hidden="true"
+        svgIcon="lucide:cloud_download"
+      ></mat-icon>
       {{ T.F.SYNC.D_SYNC_IMPORT_CONFLICT.USE_REMOTE | translate }}
     </button>
     <button
@@ -77,7 +80,10 @@
       [attr.cdkFocusInitial]="isIncomingImport ? null : ''"
       mat-stroked-button
     >
-      <mat-icon aria-hidden="true">cloud_upload</mat-icon>
+      <mat-icon
+        aria-hidden="true"
+        svgIcon="lucide:cloud_upload"
+      ></mat-icon>
       {{ T.F.SYNC.D_SYNC_IMPORT_CONFLICT.USE_LOCAL | translate }}
     </button>
   </div>

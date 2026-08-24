@@ -1,12 +1,15 @@
 @if (tasks$ | async; as tasks) {
   <h1 mat-dialog-title>
-    <mat-icon class="dialog-header-icon">notifications</mat-icon>
+    <mat-icon
+      class="dialog-header-icon"
+      svgIcon="lucide:notifications"
+    ></mat-icon>
     <span>{{ T.F.TASK.D_REMINDER_VIEW.TASK_REMINDERS | translate }}</span>
   </h1>
   <mat-dialog-content>
     @if (hasDeadlineTasks(tasks)) {
       <h3 class="section-heading">
-        <mat-icon>flag</mat-icon>
+        <mat-icon svgIcon="lucide:flag"></mat-icon>
         {{ T.F.TASK.D_REMINDER_VIEW.DEADLINE_SECTION | translate }}
       </h3>
       <div
@@ -24,7 +27,7 @@
     }
     @if (hasScheduleTasks(tasks)) {
       <h3 class="section-heading">
-        <mat-icon>alarm</mat-icon>
+        <mat-icon svgIcon="lucide:alarm"></mat-icon>
         {{ T.F.TASK.D_REMINDER_VIEW.DUE_SECTION | translate }}
       </h3>
       <div
@@ -56,7 +59,7 @@
           [triggerLabel]="T.F.TASK.D_REMINDER_VIEW.MORE_ACTIONS"
           (mainClick)="snoozeAll(10)"
         >
-          <mat-icon>snooze</mat-icon>
+          <mat-icon svgIcon="lucide:snooze"></mat-icon>
           {{ T.F.TASK.D_REMINDER_VIEW.SNOOZE_FOR_SHORT | translate: { m: 10 } }}
         </split-button>
         @if (!isMultiple) {
@@ -71,7 +74,7 @@
             matTooltipShowDelay="0"
             type="button"
           >
-            <mat-icon>check</mat-icon>
+            <mat-icon svgIcon="lucide:check"></mat-icon>
           </button>
         }
         @if (isMultiple || isAllDeadline) {
@@ -82,7 +85,7 @@
             mat-flat-button
             type="button"
           >
-            <mat-icon>wb_sunny</mat-icon>
+            <mat-icon svgIcon="lucide:wb_sunny"></mat-icon>
             {{
               (isAllDeadline
                 ? T.F.TASK.D_REMINDER_VIEW.ADD_TO_TODAY
@@ -98,7 +101,7 @@
             mat-flat-button
             type="button"
           >
-            <mat-icon>play_arrow</mat-icon>
+            <mat-icon svgIcon="lucide:play_arrow"></mat-icon>
             {{ T.F.TASK.D_REMINDER_VIEW.START | translate }}
           </button>
         }
@@ -111,7 +114,7 @@
       [disabled]="isDisableControls"
       mat-menu-item
     >
-      <mat-icon>snooze</mat-icon>
+      <mat-icon svgIcon="lucide:snooze"></mat-icon>
       {{ T.G.MINUTES | translate: { m: 30 } }}
     </button>
     <button
@@ -119,7 +122,7 @@
       [disabled]="isDisableControls"
       mat-menu-item
     >
-      <mat-icon>snooze</mat-icon>
+      <mat-icon svgIcon="lucide:snooze"></mat-icon>
       {{ T.G.MINUTES | translate: { m: 60 } }}
     </button>
     <button
@@ -127,7 +130,7 @@
       [disabled]="isDisableControls"
       mat-menu-item
     >
-      <mat-icon>today</mat-icon>
+      <mat-icon svgIcon="lucide:today"></mat-icon>
       {{ T.F.TASK.D_REMINDER_VIEW.RESCHEDULE_UNTIL_TOMORROW | translate }}
     </button>
     @if (!isMultiple) {
@@ -135,7 +138,7 @@
         (click)="editReminder(tasks[0], true)"
         mat-menu-item
       >
-        <mat-icon>edit</mat-icon>
+        <mat-icon svgIcon="lucide:edit"></mat-icon>
         {{ T.F.TASK.D_REMINDER_VIEW.RESCHEDULE_EDIT | translate }}
       </button>
     }
@@ -146,7 +149,7 @@
         [disabled]="isDisableControls"
         mat-menu-item
       >
-        <mat-icon>done_all</mat-icon>
+        <mat-icon svgIcon="lucide:done_all"></mat-icon>
         {{ T.F.TASK.D_REMINDER_VIEW.COMPLETE | translate }}
       </button>
     } @else if (isAllDeadline) {
@@ -155,7 +158,7 @@
         [disabled]="isDisableControls"
         mat-menu-item
       >
-        <mat-icon>play_arrow</mat-icon>
+        <mat-icon svgIcon="lucide:play_arrow"></mat-icon>
         {{ T.F.TASK.D_REMINDER_VIEW.START | translate }}
       </button>
     }
@@ -165,7 +168,7 @@
         [disabled]="isDisableControls"
         mat-menu-item
       >
-        <mat-icon>wb_sunny</mat-icon>
+        <mat-icon svgIcon="lucide:wb_sunny"></mat-icon>
         {{ T.F.TASK.D_REMINDER_VIEW.ADD_TO_TODAY | translate }}
       </button>
     }
@@ -191,7 +194,7 @@
       [disabled]="isDisableControls"
       mat-menu-item
     >
-      <mat-icon>alarm_off</mat-icon>
+      <mat-icon svgIcon="lucide:alarm_off"></mat-icon>
       {{
         (isMultiple
           ? T.F.TASK.D_REMINDER_VIEW.DISMISS_ALL_REMINDERS_KEEP_TODAY
@@ -206,7 +209,7 @@
         [disabled]="isDisableControls"
         mat-menu-item
       >
-        <mat-icon>delete</mat-icon>
+        <mat-icon svgIcon="lucide:delete"></mat-icon>
         {{ T.F.TASK.D_REMINDER_VIEW.DELETE | translate }}
       </button>
     }
@@ -235,7 +238,7 @@
         </div>
         @if (shouldShowDeadlineScheduleHint(task)) {
           <div class="schedule-hint">
-            <mat-icon>event</mat-icon>
+            <mat-icon svgIcon="lucide:event"></mat-icon>
             <span>
               {{ T.F.TASK.D_REMINDER_VIEW.SCHEDULED_FOR | translate }}
               @if (task.dueWithTime) {
@@ -263,7 +266,7 @@
             mat-icon-button
             type="button"
           >
-            <mat-icon>check</mat-icon>
+            <mat-icon svgIcon="lucide:check"></mat-icon>
           </button>
           <button
             [disabled]="
@@ -303,7 +306,7 @@
             mat-icon-button
             type="button"
           >
-            <mat-icon>snooze</mat-icon>
+            <mat-icon svgIcon="lucide:snooze"></mat-icon>
           </button>
           <button
             (click)="addToToday(task)"
@@ -326,28 +329,28 @@
             mat-icon-button
             type="button"
           >
-            <mat-icon>wb_sunny</mat-icon>
+            <mat-icon svgIcon="lucide:wb_sunny"></mat-icon>
           </button>
           <mat-menu #snoozeMenu="matMenu">
             <button
               (click)="snooze(task, 10)"
               mat-menu-item
             >
-              <mat-icon>snooze</mat-icon>
+              <mat-icon svgIcon="lucide:snooze"></mat-icon>
               {{ T.G.MINUTES | translate: { m: 10 } }}
             </button>
             <button
               (click)="snooze(task, 30)"
               mat-menu-item
             >
-              <mat-icon>snooze</mat-icon>
+              <mat-icon svgIcon="lucide:snooze"></mat-icon>
               {{ T.G.MINUTES | translate: { m: 30 } }}
             </button>
             <button
               (click)="snooze(task, 60)"
               mat-menu-item
             >
-              <mat-icon>snooze</mat-icon>
+              <mat-icon svgIcon="lucide:snooze"></mat-icon>
               {{ T.G.MINUTES | translate: { m: 60 } }}
             </button>
             <button
@@ -355,7 +358,7 @@
               [disabled]="isDisableControls"
               mat-menu-item
             >
-              <mat-icon>today</mat-icon>
+              <mat-icon svgIcon="lucide:today"></mat-icon>
               {{ T.F.TASK.D_REMINDER_VIEW.RESCHEDULE_UNTIL_TOMORROW | translate }}
             </button>
             <button
@@ -380,14 +383,14 @@
               (click)="dismissReminderOnly(task)"
               mat-menu-item
             >
-              <mat-icon>alarm_off</mat-icon>
+              <mat-icon svgIcon="lucide:alarm_off"></mat-icon>
               {{ T.F.TASK.D_REMINDER_VIEW.DISMISS_REMINDER_KEEP_TODAY | translate }}
             </button>
             <button
               (click)="editReminder(task)"
               mat-menu-item
             >
-              <mat-icon>edit</mat-icon>
+              <mat-icon svgIcon="lucide:edit"></mat-icon>
               {{ T.G.EDIT | translate }}
             </button>
           </mat-menu>

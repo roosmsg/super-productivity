@@ -32,7 +32,10 @@
                   ~<strong class="time-val">{{
                     estimateRemainingToday() | msToString
                   }}</strong>
-                  <mat-icon style="margin-left: 2px">hourglass_empty</mat-icon>
+                  <mat-icon
+                    style="margin-left: 2px"
+                    svgIcon="lucide:hourglass_empty"
+                  ></mat-icon>
                 </span>
               </div>
               <div class="item">
@@ -47,7 +50,7 @@
                       >(+{{ workingTodayArchived | msToString }})</span
                     >
                   }
-                  <mat-icon>timelapse</mat-icon>
+                  <mat-icon svgIcon="lucide:timelapse"></mat-icon>
                 </span>
               </div>
               @if (isShowTimeWorkedWithoutBreak) {
@@ -64,7 +67,7 @@
                     <strong class="time-val">{{
                       takeABreakService.timeWorkingWithoutABreak$ | async | msToString
                     }}</strong
-                    ><mat-icon>timer</mat-icon>
+                    ><mat-icon svgIcon="lucide:timer"></mat-icon>
                   </span>
                   <div
                     [matTooltip]="T.WW.RESET_BREAK_TIMER | translate"
@@ -75,7 +78,7 @@
                       color="lighter"
                       mat-mini-fab
                     >
-                      <mat-icon>timer_off</mat-icon>
+                      <mat-icon svgIcon="lucide:timer_off"></mat-icon>
                     </button>
                   </div>
                 </div>
@@ -130,7 +133,7 @@
                     mat-stroked-button
                     tabindex="1"
                   >
-                    <mat-icon>playlist_add</mat-icon>
+                    <mat-icon svgIcon="lucide:playlist_add"></mat-icon>
                     {{ T.WW.ADD_MORE | translate }}
                   </button>
                 </div>
@@ -208,21 +211,21 @@
                           [attr.aria-label]="T.WW.SECTION_OPTIONS | translate"
                           (click)="$event.stopPropagation()"
                         >
-                          <mat-icon>more_vert</mat-icon>
+                          <mat-icon svgIcon="lucide:more_vert"></mat-icon>
                         </button>
                         <mat-menu #sectionMenu="matMenu">
                           <button
                             mat-menu-item
                             (click)="editSection(section.id, section.title)"
                           >
-                            <mat-icon>edit</mat-icon>
+                            <mat-icon svgIcon="lucide:edit"></mat-icon>
                             {{ T.G.EDIT | translate }}
                           </button>
                           <button
                             mat-menu-item
                             (click)="deleteSection(section.id)"
                           >
-                            <mat-icon>delete</mat-icon>
+                            <mat-icon svgIcon="lucide:delete"></mat-icon>
                             {{ T.G.DELETE | translate }}
                           </button>
                         </mat-menu>
@@ -267,7 +270,7 @@
                     tabindex="1"
                     (click)="addAllOverdueToMyDay()"
                   >
-                    <mat-icon>wb_sunny</mat-icon>
+                    <mat-icon svgIcon="lucide:wb_sunny"></mat-icon>
                     {{ T.F.TASK.CMP.ADD_TO_MY_DAY | translate }}
                   </button>
                   <!--                <button-->
@@ -275,7 +278,7 @@
                   <!--                  color="primary"-->
                   <!--                  tabindex="1"-->
                   <!--                >-->
-                  <!--                  <mat-icon>edit_calendar</mat-icon>-->
+                  <!--                  <mat-icon svgIcon="lucide:edit_calendar"></mat-icon>-->
                   <!--                  {{ T.F.PLANNER.D.ADD_PLANNED.RE_PLAN_ALL | translate }}-->
                   <!--                </button>-->
                 </div>
@@ -372,7 +375,7 @@
                       (click)="moveDoneToArchive()"
                       tabindex="1"
                     >
-                      <mat-icon>done_all</mat-icon>
+                      <mat-icon svgIcon="lucide:done_all"></mat-icon>
                       {{ T.WW.MOVE_DONE_TO_ARCHIVE | translate }}
                     </button>
                   }

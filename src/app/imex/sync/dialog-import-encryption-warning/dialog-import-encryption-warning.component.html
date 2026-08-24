@@ -4,7 +4,10 @@
 
 <mat-dialog-content>
   <div class="callout callout--warning">
-    <mat-icon aria-hidden="true">warning</mat-icon>
+    <mat-icon
+      aria-hidden="true"
+      svgIcon="lucide:warning"
+    ></mat-icon>
     <p>{{ T.F.SYNC.FORM.IMPORT_ENCRYPTION_WARNING.WARNING_TEXT | translate }}</p>
   </div>
 
@@ -15,10 +18,16 @@
       }}</span>
       <span class="state-value">
         @if (currentEncryptionEnabled) {
-          <mat-icon aria-label="Encryption enabled">lock</mat-icon>
+          <mat-icon
+            aria-label="Encryption enabled"
+            svgIcon="lucide:lock"
+          ></mat-icon>
           {{ T.F.SYNC.FORM.IMPORT_ENCRYPTION_WARNING.ENCRYPTION_ENABLED | translate }}
         } @else {
-          <mat-icon aria-label="Encryption disabled">lock_open</mat-icon>
+          <mat-icon
+            aria-label="Encryption disabled"
+            svgIcon="lucide:lock_open"
+          ></mat-icon>
           {{ T.F.SYNC.FORM.IMPORT_ENCRYPTION_WARNING.ENCRYPTION_DISABLED | translate }}
         }
       </span>
@@ -34,10 +43,16 @@
       }}</span>
       <span class="state-value">
         @if (importedEncryptionEnabled) {
-          <mat-icon aria-label="Encryption enabled">lock</mat-icon>
+          <mat-icon
+            aria-label="Encryption enabled"
+            svgIcon="lucide:lock"
+          ></mat-icon>
           {{ T.F.SYNC.FORM.IMPORT_ENCRYPTION_WARNING.ENCRYPTION_ENABLED | translate }}
         } @else {
-          <mat-icon aria-label="Encryption disabled">lock_open</mat-icon>
+          <mat-icon
+            aria-label="Encryption disabled"
+            svgIcon="lucide:lock_open"
+          ></mat-icon>
           {{ T.F.SYNC.FORM.IMPORT_ENCRYPTION_WARNING.ENCRYPTION_DISABLED | translate }}
         }
       </span>
@@ -55,18 +70,27 @@
 
   @if (isEnablingEncryption) {
     <p class="note note-warn">
-      <mat-icon aria-hidden="true">key</mat-icon>
+      <mat-icon
+        aria-hidden="true"
+        svgIcon="lucide:key"
+      ></mat-icon>
       {{ T.F.SYNC.FORM.IMPORT_ENCRYPTION_WARNING.NOTE_ENABLING | translate }}
     </p>
   } @else if (isDisablingEncryption) {
     <p class="note note-warn">
-      <mat-icon aria-hidden="true">visibility</mat-icon>
+      <mat-icon
+        aria-hidden="true"
+        svgIcon="lucide:visibility"
+      ></mat-icon>
       {{ T.F.SYNC.FORM.IMPORT_ENCRYPTION_WARNING.NOTE_DISABLING | translate }}
     </p>
   }
 
   <p class="note">
-    <mat-icon aria-hidden="true">info</mat-icon>
+    <mat-icon
+      aria-hidden="true"
+      svgIcon="lucide:info"
+    ></mat-icon>
     {{ T.F.SYNC.FORM.IMPORT_ENCRYPTION_WARNING.NOTE | translate }}
   </p>
 </mat-dialog-content>
@@ -86,9 +110,9 @@
     (click)="confirm()"
   >
     @if (isEnablingEncryption) {
-      <mat-icon>lock</mat-icon>
+      <mat-icon svgIcon="lucide:lock"></mat-icon>
     } @else {
-      <mat-icon>lock_open</mat-icon>
+      <mat-icon svgIcon="lucide:lock_open"></mat-icon>
     }
     {{ T.F.SYNC.FORM.IMPORT_ENCRYPTION_WARNING.BTN_CONTINUE | translate }}
   </button>

@@ -2,7 +2,7 @@
   mat-menu-item
   (click)="editFolder()"
 >
-  <mat-icon>edit</mat-icon>
+  <mat-icon svgIcon="lucide:edit"></mat-icon>
   <span>{{ T.G.EDIT | translate }}</span>
 </button>
 
@@ -10,7 +10,7 @@
   mat-menu-item
   (click)="addSubfolder()"
 >
-  <mat-icon>create_new_folder</mat-icon>
+  <mat-icon svgIcon="lucide:create_new_folder"></mat-icon>
   <span>{{
     treeKind === MenuTreeKind.PROJECT
       ? (T.F.PROJECT_FOLDER.ADD_SUBFOLDER | translate)
@@ -23,7 +23,7 @@
     mat-menu-item
     (click)="addProject()"
   >
-    <mat-icon>add</mat-icon>
+    <mat-icon svgIcon="lucide:add"></mat-icon>
     <span>{{ T.F.PROJECT_FOLDER.ADD_PROJECT | translate }}</span>
   </button>
 }
@@ -33,7 +33,7 @@
     mat-menu-item
     (click)="addTag()"
   >
-    <mat-icon>add</mat-icon>
+    <mat-icon svgIcon="lucide:add"></mat-icon>
     <span>{{ T.F.TAG_FOLDER.ADD_TAG | translate }}</span>
   </button>
 }
@@ -42,6 +42,6 @@
   mat-menu-item
   (click)="deleteFolder()"
 >
-  <mat-icon>delete</mat-icon>
+  <mat-icon svgIcon="lucide:delete"></mat-icon>
   <span>{{ T.G.DELETE | translate }}</span>
 </button>

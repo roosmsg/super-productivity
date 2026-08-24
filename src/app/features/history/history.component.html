@@ -14,7 +14,7 @@
       color="primary"
       mat-mini-fab
     >
-      <mat-icon>call_made</mat-icon>
+      <mat-icon svgIcon="lucide:call_made"></mat-icon>
     </button>
     <div class="years">
       @for (year of wData.worklog | keyvalue: sortWorklogItems; track year.key) {
@@ -59,7 +59,7 @@
                     color="primary"
                     mat-mini-fab
                   >
-                    <mat-icon>call_made</mat-icon>
+                    <mat-icon svgIcon="lucide:call_made"></mat-icon>
                   </button>
                 </h2>
                 <div class="month-time-spent">
@@ -103,7 +103,7 @@
                             color=""
                             mat-mini-fab
                           >
-                            <mat-icon>call_made</mat-icon>
+                            <mat-icon svgIcon="lucide:call_made"></mat-icon>
                           </button>
                         </div>
                         <div class="week-table-wrapper">
@@ -181,10 +181,10 @@
                                   </td>
                                   <td>
                                     @if (!isDayExpanded(worklogForDay.value.dateStr)) {
-                                      <mat-icon>list </mat-icon>
+                                      <mat-icon svgIcon="lucide:list"></mat-icon>
                                     }
                                     @if (isDayExpanded(worklogForDay.value.dateStr)) {
-                                      <mat-icon>close </mat-icon>
+                                      <mat-icon svgIcon="lucide:close"></mat-icon>
                                     }
                                   </td>
                                 </tr>

@@ -12,18 +12,30 @@
         rel="noopener noreferrer"
         (click)="close('rate')"
       >
-        <mat-icon class="action-item-icon">star</mat-icon>
+        <mat-icon
+          class="action-item-icon"
+          svgIcon="lucide:star"
+        ></mat-icon>
         <span class="action-item-text">{{ cta.labelKey | translate }}</span>
-        <mat-icon class="action-item-trailing">open_in_new</mat-icon>
+        <mat-icon
+          class="action-item-trailing"
+          svgIcon="lucide:open_in_new"
+        ></mat-icon>
       </a>
       <button
         type="button"
         class="action-item"
         (click)="showFeedback()"
       >
-        <mat-icon class="action-item-icon">chat_bubble_outline</mat-icon>
+        <mat-icon
+          class="action-item-icon"
+          svgIcon="lucide:chat_bubble_outline"
+        ></mat-icon>
         <span class="action-item-text">{{ T.F.D_RATE.BTN_FEEDBACK | translate }}</span>
-        <mat-icon class="action-item-trailing">arrow_forward</mat-icon>
+        <mat-icon
+          class="action-item-trailing"
+          svgIcon="lucide:arrow_forward"
+        ></mat-icon>
       </button>
     </div>
   </mat-dialog-content>
@@ -58,19 +70,28 @@
         rel="noopener noreferrer"
         (click)="close('feedback')"
       >
-        <mat-icon class="action-item-icon">forum</mat-icon>
+        <mat-icon
+          class="action-item-icon"
+          svgIcon="lucide:forum"
+        ></mat-icon>
         <span class="action-item-text">
           <strong>{{ T.F.D_RATE.FEEDBACK_PUBLIC | translate }}</strong>
           <small>{{ T.F.D_RATE.FEEDBACK_PUBLIC_DESC | translate }}</small>
         </span>
-        <mat-icon class="action-item-trailing">open_in_new</mat-icon>
+        <mat-icon
+          class="action-item-trailing"
+          svgIcon="lucide:open_in_new"
+        ></mat-icon>
       </a>
       <a
         class="action-item"
         [href]="mailtoUrl"
         (click)="close('feedback')"
       >
-        <mat-icon class="action-item-icon">mail</mat-icon>
+        <mat-icon
+          class="action-item-icon"
+          svgIcon="lucide:mail"
+        ></mat-icon>
         <span class="action-item-text">
           <strong>{{ T.F.D_RATE.FEEDBACK_PRIVATE | translate }}</strong>
           <small>{{ T.F.D_RATE.FEEDBACK_PRIVATE_DESC | translate }}</small>
@@ -87,12 +108,18 @@
           rel="noopener noreferrer"
           (click)="close('feedback')"
         >
-          <mat-icon class="action-item-icon">volunteer_activism</mat-icon>
+          <mat-icon
+            class="action-item-icon"
+            svgIcon="lucide:volunteer_activism"
+          ></mat-icon>
           <span class="action-item-text">
             <strong>{{ T.F.D_RATE.FEEDBACK_CONTRIBUTE | translate }}</strong>
             <small>{{ T.F.D_RATE.FEEDBACK_CONTRIBUTE_DESC | translate }}</small>
           </span>
-          <mat-icon class="action-item-trailing">open_in_new</mat-icon>
+          <mat-icon
+            class="action-item-trailing"
+            svgIcon="lucide:open_in_new"
+          ></mat-icon>
         </a>
       }
     </div>
@@ -104,7 +131,7 @@
       type="button"
       (click)="showMain()"
     >
-      <mat-icon>arrow_back</mat-icon>
+      <mat-icon svgIcon="lucide:arrow_back"></mat-icon>
       {{ T.F.D_RATE.FEEDBACK_BACK | translate }}
     </button>
   </mat-dialog-actions>

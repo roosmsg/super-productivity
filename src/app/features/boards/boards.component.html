@@ -36,7 +36,7 @@
   <mat-tab>
     <ng-template mat-tab-label>
       <div class="tab-header-item">
-        <mat-icon>add_circle</mat-icon>
+        <mat-icon svgIcon="lucide:add_circle"></mat-icon>
       </div>
     </ng-template>
 
@@ -61,21 +61,24 @@
       mat-menu-item
       (click)="editBoard(board)"
     >
-      <mat-icon>edit</mat-icon>
+      <mat-icon svgIcon="lucide:edit"></mat-icon>
       {{ T.G.EDIT | translate }}
     </button>
     <button
       mat-menu-item
       (click)="duplicateBoard(board)"
     >
-      <mat-icon>file_copy</mat-icon>
+      <mat-icon svgIcon="lucide:file_copy"></mat-icon>
       {{ T.G.DUPLICATE | translate }}
     </button>
     <button
       mat-menu-item
       (click)="removeBoard(board)"
     >
-      <mat-icon class="color-warn-i">delete_forever</mat-icon>
+      <mat-icon
+        class="color-warn-i"
+        svgIcon="lucide:delete_forever"
+      ></mat-icon>
       {{ T.G.DELETE | translate }}
     </button>
   </ng-template>

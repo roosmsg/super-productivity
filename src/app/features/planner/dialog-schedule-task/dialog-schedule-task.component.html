@@ -24,7 +24,7 @@
       class="repeat-btn"
       (click)="openRepeatDialog()"
     >
-      <mat-icon>repeat</mat-icon>
+      <mat-icon svgIcon="lucide:repeat"></mat-icon>
       {{ T.F.TASK.D_SCHEDULE_TASK.REPEAT | translate }}:
       <span
         class="repeat-value"
@@ -44,7 +44,7 @@
         class="schedule-info"
         aria-live="polite"
       >
-        <mat-icon>info</mat-icon>
+        <mat-icon svgIcon="lucide:info"></mat-icon>
         <div class="schedule-info-text">
           @if (scheduleWarnings().hasOverlap) {
             <div>{{ T.F.TASK.D_SCHEDULE_TASK.INFO_OVERLAP | translate }}</div>
@@ -75,9 +75,9 @@
           type="button"
         >
           @if (selectedTime) {
-            <mat-icon>alarm_off</mat-icon>
+            <mat-icon svgIcon="lucide:alarm_off"></mat-icon>
           } @else {
-            <mat-icon>event_busy</mat-icon>
+            <mat-icon svgIcon="lucide:event_busy"></mat-icon>
           }
           <span class="action-label">
             {{ T.F.TASK.D_SCHEDULE_TASK.UNSCHEDULE | translate }}
@@ -93,9 +93,9 @@
         data-test-id="schedule-submit-btn"
       >
         @if (selectedTime) {
-          <mat-icon>alarm</mat-icon>
+          <mat-icon svgIcon="lucide:alarm"></mat-icon>
         } @else {
-          <mat-icon>today</mat-icon>
+          <mat-icon svgIcon="lucide:today"></mat-icon>
         }
         <span class="action-label">
           {{ T.F.TASK.D_SCHEDULE_TASK.SCHEDULE | translate }}

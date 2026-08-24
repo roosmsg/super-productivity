@@ -7,13 +7,22 @@
 >
   @if (!data.ico) {
     @if (data.type === 'SUCCESS') {
-      <mat-icon class="snack-icon">check_circle </mat-icon>
+      <mat-icon
+        class="snack-icon"
+        svgIcon="lucide:check_circle"
+      ></mat-icon>
     }
     @if (data.type === 'ERROR') {
-      <mat-icon class="snack-icon">error </mat-icon>
+      <mat-icon
+        class="snack-icon"
+        svgIcon="lucide:error"
+      ></mat-icon>
     }
     @if (data.type === 'WARNING') {
-      <mat-icon class="snack-icon">warning </mat-icon>
+      <mat-icon
+        class="snack-icon"
+        svgIcon="lucide:warning"
+      ></mat-icon>
     }
   }
   @if (data.ico) {
@@ -55,7 +64,7 @@
       mat-icon-button
       type="button"
     >
-      <mat-icon>close</mat-icon>
+      <mat-icon svgIcon="lucide:close"></mat-icon>
     </button>
   }
 

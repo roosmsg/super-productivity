@@ -15,7 +15,7 @@
         aria-haspopup="menu"
         [attr.aria-expanded]="taskContextMenu()?.isOpen() ?? false"
       >
-        <mat-icon>more_vert</mat-icon>
+        <mat-icon svgIcon="lucide:more_vert"></mat-icon>
       </button>
       <task-context-menu
         [isAdvancedControls]="true"
@@ -34,7 +34,10 @@
       [type]="'panel'"
     >
       <ng-container panel-header>
-        <mat-icon class="panel-header-icon">list</mat-icon>
+        <mat-icon
+          class="panel-header-icon"
+          svgIcon="lucide:list"
+        ></mat-icon>
         <span>{{
           T.F.TASK.ADDITIONAL_INFO.SUB_TASKS
             | translate: { nr: task().subTasks?.length || 0 }
@@ -69,7 +72,7 @@
             (click)="addSubTask()"
             mat-button
           >
-            <mat-icon>add</mat-icon>
+            <mat-icon svgIcon="lucide:add"></mat-icon>
             <span>{{ T.F.TASK.ADDITIONAL_INFO.ADD_SUB_TASK | translate }}</span>
           </button>
         </div>
@@ -87,7 +90,7 @@
       class="input-item --estimate"
     >
       <ng-container input-title>
-        <mat-icon>subdirectory_arrow_right</mat-icon>
+        <mat-icon svgIcon="lucide:subdirectory_arrow_right"></mat-icon>
         <span>{{ T.F.TASK.ADDITIONAL_INFO.PARENT | translate }}</span>
       </ng-container>
       <ng-container input-value>
@@ -107,7 +110,7 @@
       class="input-item --estimate"
     >
       <ng-container input-title>
-        <mat-icon>hourglass_empty</mat-icon>
+        <mat-icon svgIcon="lucide:hourglass_empty"></mat-icon>
         <span>{{ T.F.TASK.ADDITIONAL_INFO.TIME | translate }}</span>
       </ng-container>
       <ng-container input-value>
@@ -149,7 +152,7 @@
         @if (task().dueDay) {
           <div class="schedule-value__date">
             @if (isPlannedForTodayDay()) {
-              <mat-icon>wb_sunny</mat-icon>
+              <mat-icon svgIcon="lucide:wb_sunny"></mat-icon>
               {{ T.G.TODAY_TAG_TITLE | translate }}
             } @else {
               {{ task().dueDay | localeDate: 'shortDate' : undefined : locale() }}
@@ -158,7 +161,7 @@
         }
         @if (task().repeatCfgId && repeatCfgLabel()) {
           <div class="schedule-value__repeat">
-            <mat-icon>repeat</mat-icon>
+            <mat-icon svgIcon="lucide:repeat"></mat-icon>
             <span class="cdk-visually-hidden"
               >{{ T.F.TASK.ADDITIONAL_INFO.REPEAT | translate }}:
             </span>
@@ -177,7 +180,7 @@
     [class.color-warn]="isDeadlineOverdue()"
   >
     <ng-container input-title>
-      <mat-icon>flag</mat-icon>
+      <mat-icon svgIcon="lucide:flag"></mat-icon>
       <span>{{ deadlineLabelKey() | translate }}</span>
     </ng-container>
     <ng-container input-value>
@@ -197,7 +200,7 @@
           (click)="removeDeadline($event)"
           [matTooltip]="T.F.TASK.CMP.REMOVE_DEADLINE | translate"
         >
-          <mat-icon>close</mat-icon>
+          <mat-icon svgIcon="lucide:close"></mat-icon>
         </button>
       }
     </ng-container>
@@ -239,15 +242,15 @@
   >
     <ng-container panel-header>
       @if (isMarkdownChecklist()) {
-        <mat-icon>checklist</mat-icon>
+        <mat-icon svgIcon="lucide:checklist"></mat-icon>
         <span>{{ T.F.TASK.ADDITIONAL_INFO.CHECKLIST | translate }}</span>
         <!-- -->
       } @else if (task().notes) {
-        <mat-icon>chat</mat-icon>
+        <mat-icon svgIcon="lucide:chat"></mat-icon>
         <span>{{ T.F.TASK.ADDITIONAL_INFO.NOTES | translate }}</span>
       } @else {
         <!-- No content yet: hint that this section can hold a note or a checklist -->
-        <mat-icon>chat_bubble_outline</mat-icon>
+        <mat-icon svgIcon="lucide:chat_bubble_outline"></mat-icon>
         <span>{{ T.F.TASK.ADDITIONAL_INFO.NOTES_OR_CHECKLIST | translate }}</span>
       }
     </ng-container>
@@ -278,7 +281,7 @@
       [type]="'panel'"
     >
       <ng-container panel-header>
-        <mat-icon>attachment</mat-icon>
+        <mat-icon svgIcon="lucide:attachment"></mat-icon>
         <span>{{
           T.F.TASK.ADDITIONAL_INFO.ATTACHMENTS | translate: { nr: totalAttachments() }
         }}</span>
@@ -308,7 +311,7 @@
               matTooltipPosition="above"
               mat-button
             >
-              <mat-icon>add</mat-icon>
+              <mat-icon svgIcon="lucide:add"></mat-icon>
               <span>{{ T.F.TASK.ADDITIONAL_INFO.ADD_ATTACHMENT | translate }}</span>
             </button>
           </div>
@@ -327,7 +330,7 @@
       matTooltipPosition="above"
     >
       <ng-container input-title>
-        <mat-icon>attachment</mat-icon>
+        <mat-icon svgIcon="lucide:attachment"></mat-icon>
         <span>{{ T.F.TASK.ADDITIONAL_INFO.ADD_ATTACHMENT | translate }}</span>
       </ng-container>
       <ng-container input-value></ng-container>
@@ -342,7 +345,7 @@
     class="input-item --estimate"
   >
     <ng-container input-title>
-      <mat-icon>label</mat-icon>
+      <mat-icon svgIcon="lucide:label"></mat-icon>
     </ng-container>
     <ng-container input-value>
       <tag-edit
@@ -386,7 +389,7 @@
 
 @if (panelState.isDragOver()) {
   <div class="bgc-accent drag-over-msg">
-    <mat-icon>add</mat-icon>
+    <mat-icon svgIcon="lucide:add"></mat-icon>
     {{ T.F.TASK.CMP.DROP_ATTACHMENT | translate: { title: task().title } }}
   </div>
 }

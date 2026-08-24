@@ -10,7 +10,7 @@
         class="share-target-button native-button"
         (click)="shareNative()"
       >
-        <mat-icon>share</mat-icon>
+        <mat-icon svgIcon="lucide:share"></mat-icon>
         <span>System Share</span>
       </button>
     }
@@ -37,7 +37,10 @@
         [(ngModel)]="mastodonInstance"
         placeholder="mastodon.social"
       />
-      <mat-icon matPrefix>language</mat-icon>
+      <mat-icon
+        matPrefix
+        svgIcon="lucide:language"
+      ></mat-icon>
     </mat-form-field>
   </div>
 
@@ -47,7 +50,7 @@
       mat-button
       (click)="copyText()"
     >
-      <mat-icon>content_copy</mat-icon>
+      <mat-icon svgIcon="lucide:content_copy"></mat-icon>
       <span>Copy Text</span>
     </button>
   </div>

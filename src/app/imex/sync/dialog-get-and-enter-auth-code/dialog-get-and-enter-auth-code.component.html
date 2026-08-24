@@ -7,7 +7,10 @@
     <div class="auth-code-flex">
       <mat-form-field [style.order]="codeRequested() ? -1 : 1">
         <mat-label>{{ T.F.SYNC.D_AUTH_CODE.L_AUTH_CODE | translate }}</mat-label>
-        <mat-icon matPrefix>vpn_key</mat-icon>
+        <mat-icon
+          matPrefix
+          svgIcon="lucide:vpn_key"
+        ></mat-icon>
         <input
           #authCodeInput
           matInput
@@ -29,7 +32,7 @@
           [href]="data.url"
           (click)="onGetAuthCode(authCodeInput)"
         >
-          <mat-icon>open_in_new</mat-icon>
+          <mat-icon svgIcon="lucide:open_in_new"></mat-icon>
           {{ T.F.SYNC.D_AUTH_CODE.GET_AUTH_CODE | translate }}</a
         >
 
@@ -50,7 +53,7 @@
       mat-stroked-button
       [href]="data.url"
     >
-      <mat-icon>open_in_new</mat-icon>
+      <mat-icon svgIcon="lucide:open_in_new"></mat-icon>
       {{ T.F.SYNC.D_AUTH_CODE.GET_AUTH_CODE | translate }}</a
     >
 
@@ -83,7 +86,7 @@
         color="primary"
         mat-flat-button
       >
-        <mat-icon>save</mat-icon>
+        <mat-icon svgIcon="lucide:save"></mat-icon>
         {{ T.G.SAVE | translate }}
       </button>
     }

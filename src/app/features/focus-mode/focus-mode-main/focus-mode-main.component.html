@@ -93,7 +93,7 @@
               (click)="adjustTime(-60000)"
               class="time-adjust-btn time-adjust-btn--decrease"
             >
-              <mat-icon>remove</mat-icon>
+              <mat-icon svgIcon="lucide:remove"></mat-icon>
             </button>
           }
 
@@ -119,7 +119,7 @@
           <!-- Pomodoro cycle counter, sits below the clock digits -->
           @if (isPomodoro()) {
             <div class="cycle-counter">
-              <mat-icon>repeat</mat-icon>
+              <mat-icon svgIcon="lucide:repeat"></mat-icon>
               {{ focusModeService.currentCycle() }}
             </div>
           }
@@ -132,7 +132,7 @@
               (click)="adjustTime(60000)"
               class="time-adjust-btn time-adjust-btn--increase"
             >
-              <mat-icon>add</mat-icon>
+              <mat-icon svgIcon="lucide:add"></mat-icon>
             </button>
           }
         </div>
@@ -193,7 +193,7 @@
         (click)="startSession()"
         class="play-button"
       >
-        <mat-icon>play_arrow</mat-icon>
+        <mat-icon svgIcon="lucide:play_arrow"></mat-icon>
       </button>
 
       @if (isShowPomodoroSettings()) {
@@ -204,7 +204,7 @@
           (click)="openPomodoroSettings()"
           class="mode-settings-btn"
         >
-          <mat-icon>settings</mat-icon>
+          <mat-icon svgIcon="lucide:settings"></mat-icon>
         </button>
       }
 
@@ -216,7 +216,7 @@
           (click)="openFlowtimeSettings()"
           class="mode-settings-btn"
         >
-          <mat-icon>settings</mat-icon>
+          <mat-icon svgIcon="lucide:settings"></mat-icon>
         </button>
       }
 
@@ -249,7 +249,7 @@
         [attr.aria-label]="T.F.FOCUS_MODE.BACK_TO_PLANNING | translate"
         (click)="exitToPlanning()"
       >
-        <mat-icon>arrow_back</mat-icon>
+        <mat-icon svgIcon="lucide:arrow_back"></mat-icon>
       </button>
 
       <!-- Pause / resume the session (the task-row time stack is read-only). -->
@@ -261,7 +261,7 @@
           [attr.aria-label]="T.F.FOCUS_MODE.RESUME_SESSION | translate"
           (click)="resumeSession()"
         >
-          <mat-icon>play_arrow</mat-icon>
+          <mat-icon svgIcon="lucide:play_arrow"></mat-icon>
         </button>
       } @else {
         <button
@@ -271,7 +271,7 @@
           [attr.aria-label]="T.F.FOCUS_MODE.PAUSE_SESSION | translate"
           (click)="pauseSession()"
         >
-          <mat-icon>pause</mat-icon>
+          <mat-icon svgIcon="lucide:pause"></mat-icon>
         </button>
       }
 
@@ -283,7 +283,7 @@
           [attr.aria-label]="T.F.FOCUS_MODE.COMPLETE_FOCUS_SESSION | translate"
           (click)="completeFocusSession()"
         >
-          <mat-icon>done_all</mat-icon>
+          <mat-icon svgIcon="lucide:done_all"></mat-icon>
         </button>
       }
 
@@ -295,7 +295,7 @@
           [matTooltip]="T.G.MORE_ACTIONS | translate"
           [attr.aria-label]="T.G.MORE_ACTIONS | translate"
         >
-          <mat-icon>more_vert</mat-icon>
+          <mat-icon svgIcon="lucide:more_vert"></mat-icon>
         </button>
       } @else {
         @if (isShowCompleteSessionButton() && isPomodoro()) {
@@ -306,7 +306,7 @@
             [attr.aria-label]="T.F.FOCUS_MODE.RESET_CYCLES | translate"
             (click)="resetCycles()"
           >
-            <mat-icon>restart_alt</mat-icon>
+            <mat-icon svgIcon="lucide:restart_alt"></mat-icon>
           </button>
         }
 
@@ -336,9 +336,9 @@
             (click)="isFocusNotes.set(!isFocusNotes())"
           >
             @if (!isFocusNotes()) {
-              <mat-icon>chat</mat-icon>
+              <mat-icon svgIcon="lucide:chat"></mat-icon>
             } @else {
-              <mat-icon>expand_more</mat-icon>
+              <mat-icon svgIcon="lucide:expand_more"></mat-icon>
             }
           </button>
         }
@@ -354,7 +354,7 @@
         mat-menu-item
         (click)="resetCycles()"
       >
-        <mat-icon>restart_alt</mat-icon>
+        <mat-icon svgIcon="lucide:restart_alt"></mat-icon>
         <span>{{ T.F.FOCUS_MODE.RESET_CYCLES | translate }}</span>
       </button>
     }
@@ -377,9 +377,9 @@
         (click)="isFocusNotes.set(!isFocusNotes())"
       >
         @if (!isFocusNotes()) {
-          <mat-icon>chat</mat-icon>
+          <mat-icon svgIcon="lucide:chat"></mat-icon>
         } @else {
-          <mat-icon>expand_more</mat-icon>
+          <mat-icon svgIcon="lucide:expand_more"></mat-icon>
         }
         <span>{{ T.F.FOCUS_MODE.SHOW_HIDE_NOTES_AND_ATTACHMENTS | translate }}</span>
       </button>
@@ -416,7 +416,7 @@
       mat-mini-fab
       [attr.aria-label]="T.G.CLOSE | translate"
     >
-      <mat-icon>expand_more</mat-icon>
+      <mat-icon svgIcon="lucide:expand_more"></mat-icon>
     </button>
 
     <div class="notes-panel">
@@ -452,7 +452,7 @@
 <!-- Drag Over Message -->
 @if (displayed && isDragOver()) {
   <div class="bgc-accent drag-over-msg">
-    <mat-icon>add</mat-icon>
+    <mat-icon svgIcon="lucide:add"></mat-icon>
     {{ T.F.TASK.CMP.DROP_ATTACHMENT | translate: { title: displayed.title } }}
   </div>
 }

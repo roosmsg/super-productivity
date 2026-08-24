@@ -55,7 +55,11 @@
         </inline-input>
         @if (task().subTaskIds?.length) {
           <span class="sub-task-count">
-            <mat-icon inline="true">account_tree</mat-icon>{{ task().subTaskIds?.length }}
+            <mat-icon
+              inline="true"
+              svgIcon="lucide:account_tree"
+            ></mat-icon
+            >{{ task().subTaskIds?.length }}
           </span>
         }
       </div>

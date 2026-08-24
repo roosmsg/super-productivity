@@ -40,7 +40,7 @@
 
         @if (isPomodoro()) {
           <div class="cycle-counter">
-            <mat-icon>repeat</mat-icon>
+            <mat-icon svgIcon="lucide:repeat"></mat-icon>
             {{ displayedCycle() }}
           </div>
         }
@@ -65,7 +65,7 @@
       [matTooltip]="T.F.FOCUS_MODE.BACK_TO_PLANNING | translate"
       (click)="exitToPlanning()"
     >
-      <mat-icon>arrow_back</mat-icon>
+      <mat-icon svgIcon="lucide:arrow_back"></mat-icon>
     </button>
 
     @if (remainingTime() > 0) {
@@ -77,7 +77,7 @@
           [matTooltip]="T.F.FOCUS_MODE.RESUME_BREAK | translate"
           (click)="resumeBreak()"
         >
-          <mat-icon>play_arrow</mat-icon>
+          <mat-icon svgIcon="lucide:play_arrow"></mat-icon>
         </button>
       } @else {
         <button
@@ -87,7 +87,7 @@
           [matTooltip]="T.F.FOCUS_MODE.PAUSE_BREAK | translate"
           (click)="pauseBreak()"
         >
-          <mat-icon>pause</mat-icon>
+          <mat-icon svgIcon="lucide:pause"></mat-icon>
         </button>
       }
 
@@ -97,7 +97,7 @@
         [matTooltip]="T.F.FOCUS_MODE.SKIP_BREAK | translate"
         (click)="skipBreak()"
       >
-        <mat-icon>skip_next</mat-icon>
+        <mat-icon svgIcon="lucide:skip_next"></mat-icon>
       </button>
     }
 
@@ -108,7 +108,7 @@
         [matTooltip]="T.F.FOCUS_MODE.RESET_CYCLES | translate"
         (click)="resetCycles()"
       >
-        <mat-icon>restart_alt</mat-icon>
+        <mat-icon svgIcon="lucide:restart_alt"></mat-icon>
       </button>
     }
 
@@ -121,7 +121,7 @@
         [matTooltip]="T.F.FOCUS_MODE.START_NEXT_FOCUS_SESSION | translate"
         (click)="completeBreak()"
       >
-        <mat-icon>arrow_forward</mat-icon>
+        <mat-icon svgIcon="lucide:arrow_forward"></mat-icon>
       </button>
     }
   </section>

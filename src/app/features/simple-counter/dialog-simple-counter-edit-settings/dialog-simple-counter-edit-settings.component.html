@@ -21,7 +21,7 @@
         type="button"
         (click)="delete()"
       >
-        <mat-icon>delete</mat-icon>
+        <mat-icon svgIcon="lucide:delete"></mat-icon>
         {{ T.G.DELETE | translate }}
       </button>
     }
@@ -39,7 +39,7 @@
       type="submit"
       [disabled]="!isDirty()"
     >
-      <mat-icon>save</mat-icon>
+      <mat-icon svgIcon="lucide:save"></mat-icon>
       {{ T.G.SAVE | translate }}
     </button>
   </mat-dialog-actions>

@@ -25,7 +25,7 @@
         mat-mini-fab
         matTooltipPosition="left"
       >
-        <mat-icon>add</mat-icon>
+        <mat-icon svgIcon="lucide:add"></mat-icon>
       </button>
       <mat-menu #addColMenu="matMenu">
         @for (colOpt of colOpts; track $index) {
@@ -192,7 +192,7 @@
       color="primary"
       mat-button
     >
-      <mat-icon>content_paste</mat-icon>
+      <mat-icon svgIcon="lucide:content_paste"></mat-icon>
       {{ T.F.WORKLOG.EXPORT.COPY_TO_CLIPBOARD | translate }}
     </button>
   }
@@ -203,7 +203,7 @@
     color="primary"
     mat-button
   >
-    <mat-icon>file_download</mat-icon>
+    <mat-icon svgIcon="lucide:file_download"></mat-icon>
     {{ T.F.WORKLOG.EXPORT.SAVE_TO_FILE | translate }}
   </a>
 

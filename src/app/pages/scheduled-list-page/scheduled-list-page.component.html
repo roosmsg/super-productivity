@@ -45,7 +45,7 @@
                     mat-ripple
                   >
                     <div class="repeat-text">{{ getRepeatInfoText(taskRepeatCfg) }}</div>
-                    <mat-icon>repeat</mat-icon>
+                    <mat-icon svgIcon="lucide:repeat"></mat-icon>
                   </div>
                 </div>
               </div>
@@ -93,9 +93,9 @@
                 <div class="time-left">({{ task.dueWithTime | humanizeTimestamp }})</div>
               </div>
               @if (task.remindAt) {
-                <mat-icon>alarm</mat-icon>
+                <mat-icon svgIcon="lucide:alarm"></mat-icon>
               } @else {
-                <mat-icon>schedule</mat-icon>
+                <mat-icon svgIcon="lucide:schedule"></mat-icon>
               }
             </div>
           </planner-task>
@@ -132,7 +132,7 @@
                   {{ task.dueDay | localeDate: 'EE, d MMM' : undefined : locale() }}
                 </div>
               </div>
-              <mat-icon>today</mat-icon>
+              <mat-icon svgIcon="lucide:today"></mat-icon>
             </div>
           </planner-task>
         }
@@ -186,7 +186,7 @@
                     </div>
                   }
                 </div>
-                <mat-icon>flag</mat-icon>
+                <mat-icon svgIcon="lucide:flag"></mat-icon>
               </div>
             </planner-task>
           }

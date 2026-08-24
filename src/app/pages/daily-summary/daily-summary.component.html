@@ -13,7 +13,7 @@
     [class.is-loading-archive]="!isArchiveLoaded()"
   >
     <div class="summary-point">
-      <mat-icon>schedule</mat-icon>
+      <mat-icon svgIcon="lucide:schedule"></mat-icon>
       <div class="summary-text">
         {{ T.PDS.START_END | translate }}
         <div class="summary-val">
@@ -34,7 +34,7 @@
       </div>
     </div>
     <div class="summary-point">
-      <mat-icon>check</mat-icon>
+      <mat-icon svgIcon="lucide:check"></mat-icon>
       <div class="summary-text">
         {{ T.PDS.TASKS_COMPLETED | translate }}
         <div class="summary-val">
@@ -47,7 +47,7 @@
       [title]="T.PDS.TIME_SPENT_ESTIMATE_TITLE | translate"
       class="summary-point"
     >
-      <mat-icon>timer</mat-icon>
+      <mat-icon svgIcon="lucide:timer"></mat-icon>
       <div class="summary-text">
         {{ T.PDS.TIME_SPENT_AND_ESTIMATE_LABEL | translate }}
         <div class="summary-val">
@@ -59,7 +59,7 @@
 
     @if (isBreakTrackingSupport$ | async) {
       <div class="summary-point">
-        <mat-icon>free_breakfast</mat-icon>
+        <mat-icon svgIcon="lucide:free_breakfast"></mat-icon>
         <div class="summary-text">
           {{ T.PDS.BREAK_LABEL | translate }}
           <div class="summary-val">
@@ -85,7 +85,7 @@
     @let focusSessionCount = focusSessionCount$ | async;
     @if (focusSessionCount) {
       <div class="summary-point">
-        <mat-icon>center_focus_strong</mat-icon>
+        <mat-icon svgIcon="lucide:center_focus_strong"></mat-icon>
         <div class="summary-text">
           {{ T.PDS.FOCUS_SUMMARY | translate }}
           <div class="summary-val">
@@ -123,7 +123,7 @@
           (click)="updateDailySummaryTxt(undefined)"
           mat-icon-button
         >
-          <mat-icon>visibility_off</mat-icon>
+          <mat-icon svgIcon="lucide:visibility_off"></mat-icon>
         </button>
       </inline-markdown>
     } @else {
@@ -133,7 +133,7 @@
         (click)="updateDailySummaryTxt('', true)"
         matTooltip="Click to add a custom text block to describe your day end routine."
       >
-        <mat-icon>note_alt</mat-icon>
+        <mat-icon svgIcon="lucide:note_alt"></mat-icon>
       </button>
     }
     <!--      <inline-markdown-->
@@ -228,7 +228,7 @@
           color="primary"
           mat-flat-button
         >
-          <mat-icon>wb_sunny</mat-icon>
+          <mat-icon svgIcon="lucide:wb_sunny"></mat-icon>
           {{ T.PDS.SAVE_AND_GO_HOME | translate }}
         </button>
       }
@@ -238,7 +238,7 @@
           color="primary"
           mat-flat-button
         >
-          <mat-icon>wb_sunny</mat-icon>
+          <mat-icon svgIcon="lucide:wb_sunny"></mat-icon>
           {{ T.PDS.CLEAR_ALL_CONTINUE | translate }}
         </button>
       }

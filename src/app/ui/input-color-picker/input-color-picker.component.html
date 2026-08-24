@@ -34,7 +34,7 @@
           (click)="selectColor(color)"
         >
           @if (value() === color) {
-            <mat-icon>check</mat-icon>
+            <mat-icon svgIcon="lucide:check"></mat-icon>
           }
         </button>
       }
@@ -46,9 +46,9 @@
         (click)="openNativePicker()"
       >
         @if (!isPresetColor()) {
-          <mat-icon>check</mat-icon>
+          <mat-icon svgIcon="lucide:check"></mat-icon>
         } @else {
-          <mat-icon>colorize</mat-icon>
+          <mat-icon svgIcon="lucide:colorize"></mat-icon>
         }
       </button>
     </div>

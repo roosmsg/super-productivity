@@ -4,7 +4,10 @@
     <span>{{ totalEstimate() | roundDuration | msToString }}</span>
 
     @if ((overdueTasks() || []).length > 5) {
-      <mat-icon inline="true">task_alt</mat-icon>
+      <mat-icon
+        inline="true"
+        svgIcon="lucide:task_alt"
+      ></mat-icon>
       <span>{{ (overdueTasks() || []).length }}</span>
     }
   </div>
@@ -36,7 +39,7 @@
 @if (overdueDeadlineTasks()?.length) {
   <div class="deadlines">
     <div class="section-title">
-      <mat-icon>flag</mat-icon>
+      <mat-icon svgIcon="lucide:flag"></mat-icon>
     </div>
 
     <div class="deadline-items">

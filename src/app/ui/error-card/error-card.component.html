@@ -1,7 +1,10 @@
 <mat-card appearance="raised">
   <mat-card-content>
     <div class="wrap">
-      <mat-icon color="warn">error</mat-icon>
+      <mat-icon
+        color="warn"
+        svgIcon="lucide:error"
+      ></mat-icon>
       @if (actionAdvice()) {
         <div>
           <strong>{{ actionAdvice() }}</strong>

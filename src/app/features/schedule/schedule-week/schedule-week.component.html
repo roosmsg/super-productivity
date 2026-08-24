@@ -7,7 +7,7 @@
     @for (day of daysToShow(); track $index) {
       <div class="day">
         @if (day === todayDateStr()) {
-          <mat-icon>wb_sunny</mat-icon>
+          <mat-icon svgIcon="lucide:wb_sunny"></mat-icon>
         }
         <div class="day-num">{{ dayHeaderLabels()[day].num }}</div>
         <div class="day-day">{{ dayHeaderLabels()[day].day }}</div>
@@ -175,7 +175,7 @@
 @if (showShiftKeyInfo()) {
   <div class="shift-key-info">
     <div class="info-content">
-      <mat-icon>info</mat-icon>
+      <mat-icon svgIcon="lucide:info"></mat-icon>
       <span>{{ T.F.SCHEDULE.SHIFT_KEY_INFO | translate }}</span>
     </div>
   </div>

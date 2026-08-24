@@ -22,7 +22,10 @@
           <div class="habit-initial">{{ sc.title.charAt(0).toUpperCase() }}</div>
         }
         @if (isSuccess()) {
-          <mat-icon class="check-ico">check</mat-icon>
+          <mat-icon
+            class="check-ico"
+            svgIcon="lucide:check"
+          ></mat-icon>
         }
       </button>
       @if (sc.countOnDay[todayStr()]) {
@@ -48,7 +51,10 @@
           <div class="habit-initial">{{ sc.title.charAt(0).toUpperCase() }}</div>
         }
         @if (isSuccess()) {
-          <mat-icon class="check-ico">check</mat-icon>
+          <mat-icon
+            class="check-ico"
+            svgIcon="lucide:check"
+          ></mat-icon>
         }
       </button>
       @if (sc.countOnDay[todayStr()]) {
@@ -82,7 +88,10 @@
           <div class="habit-initial">{{ sc.title.charAt(0).toUpperCase() }}</div>
         }
         @if (isSuccess()) {
-          <mat-icon class="check-ico">check</mat-icon>
+          <mat-icon
+            class="check-ico"
+            svgIcon="lucide:check"
+          ></mat-icon>
         }
       </button>
       @if (hasVisibleCountdownTime(sc, countdownTime)) {

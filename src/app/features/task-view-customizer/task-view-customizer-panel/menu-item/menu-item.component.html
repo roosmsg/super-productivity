@@ -9,7 +9,10 @@
     <span class="menu-item-content">
       <span>{{ option.label | translate }}</span>
       @if (selectedFilter().type === type() && selectedFilter().preset === option.type) {
-        <mat-icon class="check-icon">check</mat-icon>
+        <mat-icon
+          class="check-icon"
+          svgIcon="lucide:check"
+        ></mat-icon>
       }
     </span>
   </button>

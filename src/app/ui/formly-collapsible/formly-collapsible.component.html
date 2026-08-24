@@ -7,7 +7,10 @@
   [attr.aria-expanded]="isExpanded()"
   class="collapsible-header sub-section-heading"
 >
-  <mat-icon class="collapsible-expand-icon">expand_more</mat-icon>
+  <mat-icon
+    class="collapsible-expand-icon"
+    svgIcon="lucide:expand_more"
+  ></mat-icon>
 
   <div class="collapsible-title">{{ to.label || '' | translate }}</div>
 </div>

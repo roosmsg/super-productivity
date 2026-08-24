@@ -6,7 +6,7 @@
       (click)="quickAccessBtnClick($event, 'today')"
       [matTooltip]="quickAccessTranslationPrefix() + '.QA_TODAY' | translate"
     >
-      <mat-icon>wb_sunny</mat-icon>
+      <mat-icon svgIcon="lucide:wb_sunny"></mat-icon>
     </button>
 
     <button
@@ -15,7 +15,7 @@
       (click)="quickAccessBtnClick($event, 'tomorrow')"
       [matTooltip]="quickAccessTranslationPrefix() + '.QA_TOMORROW' | translate"
     >
-      <mat-icon>wb_twilight</mat-icon>
+      <mat-icon svgIcon="lucide:wb_twilight"></mat-icon>
     </button>
     <button
       mat-icon-button
@@ -23,7 +23,7 @@
       (click)="quickAccessBtnClick($event, 'nextWeek')"
       [matTooltip]="quickAccessTranslationPrefix() + '.QA_NEXT_WEEK' | translate"
     >
-      <mat-icon>next_week</mat-icon>
+      <mat-icon svgIcon="lucide:next_week"></mat-icon>
     </button>
     <button
       mat-icon-button
@@ -31,7 +31,7 @@
       (click)="quickAccessBtnClick($event, 'nextMonth')"
       [matTooltip]="quickAccessTranslationPrefix() + '.QA_NEXT_MONTH' | translate"
     >
-      <mat-icon>bedtime</mat-icon>
+      <mat-icon svgIcon="lucide:bedtime"></mat-icon>
     </button>
   </div>
 }
@@ -60,7 +60,10 @@
     subscriptSizing="dynamic"
   >
     <mat-label>{{ timeLabel() }}</mat-label>
-    <mat-icon matPrefix>schedule</mat-icon>
+    <mat-icon
+      matPrefix
+      svgIcon="lucide:schedule"
+    ></mat-icon>
     <input
       type="time"
       spTimeStep
@@ -77,8 +80,8 @@
         class="time-clear-btn"
         matSuffix
         (click)="onTimeClear($event)"
-        >close
-      </mat-icon>
+        svgIcon="lucide:close"
+      ></mat-icon>
     }
   </mat-form-field>
 
@@ -88,7 +91,10 @@
       class="reminder-form-field"
       subscriptSizing="dynamic"
     >
-      <mat-icon matPrefix>alarm</mat-icon>
+      <mat-icon
+        matPrefix
+        svgIcon="lucide:alarm"
+      ></mat-icon>
       <mat-label>{{ reminderLabel() | translate }}</mat-label>
       <mat-select
         [ngModel]="selectedReminderCfgId()"
