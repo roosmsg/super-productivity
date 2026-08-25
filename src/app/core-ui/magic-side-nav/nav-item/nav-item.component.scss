@@ -107,6 +107,12 @@
 }
 
 // Active state visuals - ensure they override Angular Material styles
+// The icon of a project or tag carries that context's own colour as an inline
+// style. An `!important` declaration outranks an inline one, so colouring every
+// icon here replaced it the moment the row became active — the list lost its
+// colour coding on exactly the row being looked at. Icons that carry a context
+// colour mark themselves with `.has-context-color` and are left alone; the rest
+// still follow the active text colour.
 //button[mat-menu-item].nav-link[routerlinkactive="active"],
 button[mat-menu-item].nav-link.active {
   color: var(--sidenav-active-text) !important;
@@ -116,7 +122,7 @@ button[mat-menu-item].nav-link.active {
     color: var(--sidenav-active-text) !important;
   }
 
-  .nav-icon {
+  .nav-icon:not(.has-context-color) {
     color: var(--sidenav-active-text) !important;
   }
 }
@@ -218,7 +224,7 @@ button[mat-menu-item].nav-link.active {
     background: var(--sidenav-item-active-bg);
     color: var(--sidenav-active-text);
 
-    .nav-icon {
+    .nav-icon:not(.has-context-color) {
       color: var(--sidenav-active-text);
     }
 
@@ -233,7 +239,7 @@ button[mat-menu-item].nav-link.active {
       color: var(--sidenav-active-text) !important;
 
       .nav-label,
-      .nav-icon,
+      .nav-icon:not(.has-context-color),
       .mat-mdc-menu-item-text {
         color: var(--sidenav-active-text) !important;
       }
@@ -327,7 +333,7 @@ button[mat-menu-item].nav-link.active {
         inset: 4px;
       }
 
-      .nav-icon {
+      .nav-icon:not(.has-context-color) {
         color: var(--sidenav-active-text) !important;
       }
 
