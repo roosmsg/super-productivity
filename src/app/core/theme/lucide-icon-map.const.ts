@@ -178,7 +178,11 @@ export const LUCIDE_ICON_MAP: [string, string][] = [
   ['play_arrow', 'play'],
   ['playlist_add', 'list-plus'],
   ['playlist_add_check', 'list-checks'],
-  ['priority_high', 'circle-alert'],
+  // Lucide draws this as circle-alert, an exclamation in a circle, and
+  // Material's own mark reads better for it. Commented rather than deleted,
+  // so the name stays accounted for: neither reader of this table sees it,
+  // and the icon font keeps it.
+  // ['priority_high', 'circle-alert'],
   ['public', 'globe'],
   ['refresh', 'refresh-cw'],
   ['remove', 'minus'],
