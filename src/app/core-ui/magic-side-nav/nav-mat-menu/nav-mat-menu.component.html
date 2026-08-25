@@ -24,6 +24,11 @@
             class="nav-icon"
             [svgIcon]="child['svgIcon']"
           ></mat-icon>
+        } @else if (lucideSvgIcon(child.icon); as lucideName) {
+          <mat-icon
+            class="nav-icon"
+            [svgIcon]="lucideName"
+          ></mat-icon>
         } @else {
           <mat-icon class="nav-icon">{{ child.icon }}</mat-icon>
         }

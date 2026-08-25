@@ -1,6 +1,14 @@
 /**
  * Lucide replacements for the Material Symbols ligatures used outside the
- * settings pages.
+ * plugins pages.
+ *
+ * Plugin artwork is left alone on purpose. A plugin names its own icon, and
+ * replacing it would put this theme's hand on a drawing its author chose.
+ *
+ * A few entries are for ligatures the app does not currently draw — `bolt`,
+ * `avg_pace`, `calendar_clock`. They are correct mappings in their own right,
+ * and carrying them means the drawing is copied into assets/icons/lucide, where
+ * an installed theme can reach it by URL instead of inlining a copy of its own.
  *
  * The key is the Material ligature the templates used before, the value is the
  * Lucide file name under assets/icons/lucide. Keeping the Material name as the
@@ -13,9 +21,11 @@
  * offline exactly as it does with the icon font.
  */
 export const LUCIDE_ICON_MAP: [string, string][] = [
+  ['account_circle', 'circle-user'],
   ['account_tree', 'git-branch'],
   ['add', 'plus'],
   ['add_circle', 'circle-plus'],
+  ['add_task', 'list-plus'],
   ['adjust', 'circle-dot'],
   ['alarm', 'alarm-clock'],
   ['alarm_off', 'alarm-clock-off'],
@@ -24,12 +34,18 @@ export const LUCIDE_ICON_MAP: [string, string][] = [
   ['arrow_downward', 'arrow-down'],
   ['arrow_forward', 'arrow-right'],
   ['arrow_upward', 'arrow-up'],
+  ['assignment', 'clipboard-list'],
   ['attach_file', 'paperclip'],
   ['attachment', 'paperclip'],
+  ['auto_awesome', 'sparkles'],
   ['autorenew', 'refresh-cw'],
+  ['avg_pace', 'gauge'],
   ['bedtime', 'moon'],
   ['block', 'ban'],
+  ['bolt', 'zap'],
   ['bottom_panel_open', 'panel-bottom-open'],
+  ['bug_report', 'bug'],
+  ['calendar_clock', 'calendar-clock'],
   ['calendar_month', 'calendar-days'],
   ['calendar_view_day', 'calendar-range'],
   ['call_made', 'arrow-up-right'],
@@ -48,25 +64,33 @@ export const LUCIDE_ICON_MAP: [string, string][] = [
   ['clear', 'x'],
   ['close', 'x'],
   ['cloud_download', 'cloud-download'],
+  ['cloud_sync', 'cloud-cog'],
   ['cloud_upload', 'cloud-upload'],
   ['code', 'code'],
   ['colorize', 'pipette'],
   ['comment', 'message-circle'],
   ['compress', 'shrink'],
+  ['computer', 'monitor'],
   ['content_copy', 'copy'],
   ['content_paste', 'clipboard'],
   ['create_new_folder', 'folder-plus'],
+  ['dark_mode', 'moon'],
   ['delete', 'trash-2'],
   ['delete_forever', 'trash'],
   ['delete_sweep', 'trash'],
   ['desktop_windows', 'monitor'],
   ['devices_other', 'monitor-smartphone'],
+  ['directions', 'signpost'],
+  ['directions_walk', 'footprints'],
+  ['done', 'check'],
   ['done_all', 'check-check'],
   ['donut_large', 'chart-pie'],
   ['download', 'download'],
   ['drag_handle', 'grip-horizontal'],
   ['edit', 'pencil'],
   ['edit_calendar', 'calendar-cog'],
+  ['email', 'mail'],
+  ['emergency', 'siren'],
   ['emoji_events', 'trophy'],
   ['enhanced_encryption', 'lock-keyhole'],
   ['error', 'circle-alert'],
@@ -80,11 +104,15 @@ export const LUCIDE_ICON_MAP: [string, string][] = [
   ['extension', 'puzzle'],
   ['extension_off', 'puzzle'],
   ['favorite', 'heart'],
+  ['feedback', 'message-square-text'],
   ['file_copy', 'copy'],
   ['file_download', 'download'],
   ['file_upload', 'upload'],
   ['filter_alt', 'filter'],
+  ['filter_list', 'list-filter'],
+  ['fitness_center', 'dumbbell'],
   ['flag', 'flag'],
+  ['folder', 'folder'],
   ['folder_open', 'folder-open'],
   ['format_bold', 'bold'],
   ['format_italic', 'italic'],
@@ -96,13 +124,19 @@ export const LUCIDE_ICON_MAP: [string, string][] = [
   ['free_breakfast', 'coffee'],
   ['fullscreen', 'maximize'],
   ['functions', 'sigma'],
+  ['grid_view', 'layout-grid'],
   ['group_add', 'user-plus'],
   ['group_work', 'users'],
+  ['heart_check', 'heart'],
+  ['help_center', 'circle-help'],
   ['help_outline', 'circle-help'],
   ['history', 'history'],
   ['home', 'house'],
+  ['hourglass_bottom', 'hourglass'],
   ['hourglass_empty', 'hourglass'],
   ['image', 'image'],
+  ['image_not_supported', 'image-off'],
+  ['inbox', 'inbox'],
   ['info', 'info'],
   ['integration_instructions', 'file-code'],
   ['key', 'key'],
@@ -110,9 +144,11 @@ export const LUCIDE_ICON_MAP: [string, string][] = [
   ['label', 'tag'],
   ['language', 'globe'],
   ['library_books', 'library'],
+  ['light_mode', 'sun'],
   ['link', 'link'],
   ['link_off', 'unlink'],
   ['list', 'list'],
+  ['list_alt', 'square-menu'],
   ['local_fire_department', 'flame'],
   ['lock', 'lock'],
   ['lock_open', 'lock-open'],
@@ -138,6 +174,8 @@ export const LUCIDE_ICON_MAP: [string, string][] = [
   ['play_arrow', 'play'],
   ['playlist_add', 'list-plus'],
   ['playlist_add_check', 'list-checks'],
+  ['priority_high', 'circle-alert'],
+  ['public', 'globe'],
   ['refresh', 'refresh-cw'],
   ['remove', 'minus'],
   ['remove_done', 'list-x'],
@@ -147,6 +185,8 @@ export const LUCIDE_ICON_MAP: [string, string][] = [
   ['restaurant', 'utensils'],
   ['restore', 'history'],
   ['right_panel_open', 'panel-right-open'],
+  ['rocket_launch', 'rocket'],
+  ['rule', 'list-checks'],
   ['save', 'save'],
   ['schedule', 'clock'],
   ['search', 'search'],
@@ -157,12 +197,16 @@ export const LUCIDE_ICON_MAP: [string, string][] = [
   ['settings_backup_restore', 'rotate-ccw'],
   ['share', 'share-2'],
   ['skip_next', 'skip-forward'],
+  ['smartphone', 'smartphone'],
   ['snooze', 'alarm-clock-off'],
   ['sort', 'arrow-up-down'],
   ['star', 'star'],
   ['strikethrough_s', 'strikethrough'],
   ['subdirectory_arrow_left', 'corner-down-left'],
   ['subdirectory_arrow_right', 'corner-down-right'],
+  ['swap_horiz', 'arrow-left-right'],
+  ['swipe_left', 'square-arrow-left'],
+  ['swipe_right', 'square-arrow-right'],
   ['sync', 'refresh-cw'],
   ['sync_disabled', 'refresh-cw-off'],
   ['sync_problem', 'refresh-cw-off'],
@@ -186,9 +230,31 @@ export const LUCIDE_ICON_MAP: [string, string][] = [
   ['visibility_off', 'eye-off'],
   ['volunteer_activism', 'heart-handshake'],
   ['vpn_key', 'key-round'],
+  ['wallpaper', 'image'],
   ['warning', 'triangle-alert'],
   ['wb_sunny', 'sun'],
   ['wb_twilight', 'sunrise'],
   ['webhook', 'webhook'],
   ['wifi_off', 'wifi-off'],
 ];
+
+const LUCIDE_LIGATURES = new Set(LUCIDE_ICON_MAP.map(([ligature]) => ligature));
+
+/**
+ * The `svgIcon` value for a Material ligature, or null when this map has no
+ * Lucide replacement for it.
+ *
+ * Templates that name an icon themselves should write the literal
+ * `svgIcon="lucide:…"`, the way the rest of the app does. This is for the few
+ * that render an icon coming from data: a project or tag icon the user picked,
+ * which may just as well be an emoji, or an icon a plugin names. Those bind the
+ * result and keep the ligature as the element's content, so a name with no
+ * replacement falls back to the icon font instead of resolving to nothing.
+ *
+ * Callers must switch on the result with `@if (… ; as name)` rather than
+ * binding it directly. MatIcon empties the element when `svgIcon` goes from a
+ * value back to null, and that takes the interpolated text node with it; two
+ * branches give Angular a fresh element instead.
+ */
+export const lucideSvgIcon = (ligature: string | null | undefined): string | null =>
+  ligature && LUCIDE_LIGATURES.has(ligature) ? `lucide:${ligature}` : null;

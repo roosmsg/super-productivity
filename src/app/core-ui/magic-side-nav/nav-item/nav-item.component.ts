@@ -10,6 +10,7 @@ import {
 import { RouterLink, RouterModule } from '@angular/router';
 
 import { GlobalThemeService } from '../../../core/theme/global-theme.service';
+import { lucideSvgIcon } from '../../../core/theme/lucide-icon-map.const';
 import {
   WorkContextCommon,
   WorkContextType,
@@ -70,6 +71,8 @@ import { PluginIconComponent } from '../../../plugins/ui/plugin-icon/plugin-icon
 })
 export class NavItemComponent {
   readonly T = T;
+  /** Nav icons come from config, plugins and user-picked project/tag icons. */
+  readonly lucideSvgIcon = lucideSvgIcon;
   private readonly _globalThemeService = inject(GlobalThemeService);
   private readonly _navConfigService = inject(MagicNavConfigService);
   private readonly _translateService = inject(TranslateService);

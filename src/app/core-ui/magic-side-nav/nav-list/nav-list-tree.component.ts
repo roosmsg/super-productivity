@@ -38,6 +38,7 @@ import { isSingleEmoji } from '../../../util/extract-first-emoji';
 import { expandCollapseAni } from '../../../ui/tree-dnd/tree.animations';
 import { Router } from '@angular/router';
 import { Log } from '../../../core/log';
+import { lucideSvgIcon } from '../../../core/theme/lucide-icon-map.const';
 
 const EXPAND_ANIMATION_RESET_DELAY_MS = 250;
 
@@ -82,6 +83,8 @@ export class NavListTreeComponent implements OnDestroy {
   readonly T = T;
   readonly WorkContextType = WorkContextType;
   readonly DEFAULT_PROJECT_ICON = DEFAULT_PROJECT_ICON;
+  /** Tree icons come from config and from user-picked project icons. */
+  readonly lucideSvgIcon = lucideSvgIcon;
   readonly isSingleEmoji = isSingleEmoji;
   readonly getProjectVisibilityIconColor = getProjectVisibilityIconColor;
   readonly MenuTreeKind = MenuTreeKind;

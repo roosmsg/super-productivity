@@ -13,13 +13,23 @@
     mat-menu-item
     (click)="clicked.emit()"
   >
-    <mat-icon
-      class="nav-icon"
-      [style.color]="workContextIconColor() ?? null"
-      [class.nav-icon-emoji]="isWorkContextEmojiIcon()"
-      [class.drag-handle]="defaultIcon() !== 'today' && defaultIcon() !== 'inbox'"
-      >{{ workContext()!.icon || defaultIcon() }}
-    </mat-icon>
+    @let workContextIcon = workContext()!.icon || defaultIcon();
+    @if (lucideSvgIcon(workContextIcon); as lucideName) {
+      <mat-icon
+        class="nav-icon"
+        [style.color]="workContextIconColor() ?? null"
+        [class.drag-handle]="defaultIcon() !== 'today' && defaultIcon() !== 'inbox'"
+        [svgIcon]="lucideName"
+      ></mat-icon>
+    } @else {
+      <mat-icon
+        class="nav-icon"
+        [style.color]="workContextIconColor() ?? null"
+        [class.nav-icon-emoji]="isWorkContextEmojiIcon()"
+        [class.drag-handle]="defaultIcon() !== 'today' && defaultIcon() !== 'inbox'"
+        >{{ workContextIcon }}
+      </mat-icon>
+    }
 
     <span
       class="nav-label"
@@ -64,9 +74,10 @@
     [attr.aria-controls]="ariaControls()"
     (click)="clicked.emit()"
   >
-    <mat-icon class="nav-icon expand-icon drag-handle folder-icon">
-      {{ expanded() ? 'folder_open' : 'folder' }}
-    </mat-icon>
+    <mat-icon
+      class="nav-icon expand-icon drag-handle folder-icon"
+      [svgIcon]="expanded() ? 'lucide:folder_open' : 'lucide:folder'"
+    ></mat-icon>
     @if (label()) {
       <span
         class="nav-label"
@@ -127,12 +138,20 @@
           [svgIcon]="namedSvgIcon()"
         ></mat-icon>
       } @else if (icon()) {
-        <mat-icon
-          class="nav-icon"
-          [class.expand-icon]="container() === 'group' && icon() === 'expand_more'"
-        >
-          {{ icon() }}
-        </mat-icon>
+        @if (lucideSvgIcon(icon()); as lucideName) {
+          <mat-icon
+            class="nav-icon"
+            [class.expand-icon]="container() === 'group' && icon() === 'expand_more'"
+            [svgIcon]="lucideName"
+          ></mat-icon>
+        } @else {
+          <mat-icon
+            class="nav-icon"
+            [class.expand-icon]="container() === 'group' && icon() === 'expand_more'"
+          >
+            {{ icon() }}
+          </mat-icon>
+        }
       }
       @if (label()) {
         <span
@@ -196,12 +215,20 @@
           [svgIcon]="namedSvgIcon()"
         ></mat-icon>
       } @else if (icon()) {
-        <mat-icon
-          class="nav-icon"
-          [class.expand-icon]="container() === 'group' && icon() === 'expand_more'"
-        >
-          {{ icon() }}
-        </mat-icon>
+        @if (lucideSvgIcon(icon()); as lucideName) {
+          <mat-icon
+            class="nav-icon"
+            [class.expand-icon]="container() === 'group' && icon() === 'expand_more'"
+            [svgIcon]="lucideName"
+          ></mat-icon>
+        } @else {
+          <mat-icon
+            class="nav-icon"
+            [class.expand-icon]="container() === 'group' && icon() === 'expand_more'"
+          >
+            {{ icon() }}
+          </mat-icon>
+        }
       }
       @if (label()) {
         <span
@@ -239,12 +266,20 @@
           [svgIcon]="namedSvgIcon()"
         ></mat-icon>
       } @else if (icon()) {
-        <mat-icon
-          class="nav-icon"
-          [class.expand-icon]="container() === 'group' && icon() === 'expand_more'"
-        >
-          {{ icon() }}
-        </mat-icon>
+        @if (lucideSvgIcon(icon()); as lucideName) {
+          <mat-icon
+            class="nav-icon"
+            [class.expand-icon]="container() === 'group' && icon() === 'expand_more'"
+            [svgIcon]="lucideName"
+          ></mat-icon>
+        } @else {
+          <mat-icon
+            class="nav-icon"
+            [class.expand-icon]="container() === 'group' && icon() === 'expand_more'"
+          >
+            {{ icon() }}
+          </mat-icon>
+        }
       }
       @if (label()) {
         <span

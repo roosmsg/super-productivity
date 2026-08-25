@@ -9,6 +9,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { PluginService } from '../../plugin.service';
 import { MatIcon } from '@angular/material/icon';
 import { sanitizeSvgIconContent } from '../../../util/sanitize-svg-icon.util';
+import { lucideSvgIcon } from '../../../core/theme/lucide-icon-map.const';
 
 @Component({
   selector: 'plugin-icon',
@@ -20,6 +21,13 @@ import { sanitizeSvgIconContent } from '../../../util/sanitize-svg-icon.util';
         [style.width]="size() + 'px'"
         [style.height]="size() + 'px'"
       ></div>
+    } @else if (lucideSvgIcon(fallbackIcon()); as lucideName) {
+      <mat-icon
+        [style.width]="size() + 'px'"
+        [style.height]="size() + 'px'"
+        [style.font-size]="size() + 'px'"
+        [svgIcon]="lucideName"
+      ></mat-icon>
     } @else {
       <mat-icon [style.font-size]="size() + 'px'">{{ fallbackIcon() }}</mat-icon>
     }
@@ -60,6 +68,8 @@ export class PluginIconComponent {
   readonly pluginId = input.required<string>();
   readonly size = input<number>(24);
   readonly fallbackIcon = input<string>('extension');
+  /** The fallback is a Material ligature name, from the app or from a plugin. */
+  readonly lucideSvgIcon = lucideSvgIcon;
 
   readonly sanitizedSvg = computed(() => {
     const pluginId = this.pluginId();

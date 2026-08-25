@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { NavItem, NavMenuItem } from '../magic-side-nav.model';
 import { NavItemComponent } from '../nav-item/nav-item.component';
+import { lucideSvgIcon } from '../../../core/theme/lucide-icon-map.const';
 
 @Component({
   selector: 'nav-mat-menu',
@@ -15,6 +16,8 @@ import { NavItemComponent } from '../nav-item/nav-item.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavMatMenuComponent {
+  /** Help-menu icons come from config as Material ligature names. */
+  readonly lucideSvgIcon = lucideSvgIcon;
   item = input.required<NavMenuItem>();
   showLabels = input<boolean>(true);
 

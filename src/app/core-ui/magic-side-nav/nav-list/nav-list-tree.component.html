@@ -22,7 +22,11 @@
               [matTooltip]="btn.tooltip | translate"
               [matMenuTriggerFor]="visibilityMenu"
             >
-              <mat-icon>{{ btn.icon }}</mat-icon>
+              @if (lucideSvgIcon(btn.icon); as lucideName) {
+                <mat-icon [svgIcon]="lucideName"></mat-icon>
+              } @else {
+                <mat-icon>{{ btn.icon }}</mat-icon>
+              }
             </button>
           } @else {
             <button
@@ -31,7 +35,11 @@
               [matTooltip]="btn.tooltip | translate"
               (click)="btn.action?.()"
             >
-              <mat-icon>{{ btn.icon }}</mat-icon>
+              @if (lucideSvgIcon(btn.icon); as lucideName) {
+                <mat-icon [svgIcon]="lucideName"></mat-icon>
+              } @else {
+                <mat-icon>{{ btn.icon }}</mat-icon>
+              }
             </button>
           }
         }
@@ -140,9 +148,10 @@
             'text-overflow': 'ellipsis',
           }"
         >
-          <mat-icon [ngStyle]="{ 'font-size': '18px', width: '18px', height: '18px' }">
-            {{ data.isFolder ? 'folder' : 'assignment' }}
-          </mat-icon>
+          <mat-icon
+            [ngStyle]="{ 'font-size': '18px', width: '18px', height: '18px' }"
+            [svgIcon]="data.isFolder ? 'lucide:folder' : 'lucide:assignment'"
+          ></mat-icon>
           <span>{{
             data.node.data?.k === MenuTreeKind.FOLDER
               ? data.node.data.name
@@ -172,12 +181,20 @@
       } @else {
         <mat-icon svgIcon="lucide:visibility_off"></mat-icon>
       }
-      <mat-icon
-        class="nav-icon"
-        [class.nav-icon-emoji]="isProjectIconEmoji"
-        [style.color]="getProjectVisibilityIconColor(project)"
-        >{{ projectIcon }}</mat-icon
-      >
+      @if (lucideSvgIcon(projectIcon); as lucideName) {
+        <mat-icon
+          class="nav-icon"
+          [style.color]="getProjectVisibilityIconColor(project)"
+          [svgIcon]="lucideName"
+        ></mat-icon>
+      } @else {
+        <mat-icon
+          class="nav-icon"
+          [class.nav-icon-emoji]="isProjectIconEmoji"
+          [style.color]="getProjectVisibilityIconColor(project)"
+          >{{ projectIcon }}</mat-icon
+        >
+      }
       {{ project.title }}
     </button>
   }
