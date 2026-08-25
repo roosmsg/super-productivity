@@ -188,7 +188,7 @@ export const LUCIDE_ICON_MAP: [string, string][] = [
   ['restart_alt', 'rotate-ccw'],
   ['restaurant', 'utensils'],
   ['restore', 'history'],
-  ['right_panel_open', 'panel-right-open'],
+  ['right_panel_open', 'panel-right'],
   ['rocket_launch', 'rocket'],
   ['rule', 'list-checks'],
   ['save', 'save'],
