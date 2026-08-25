@@ -36,6 +36,9 @@ const fs = require('fs');
 const path = require('path');
 
 const REPO_ROOT = path.resolve(process.argv[2] || path.join(__dirname, '..'));
+
+/** Report paths the same way on Windows as on POSIX. */
+const toPosix = (p) => p.split(path.sep).join('/');
 const SRC_DIR = path.join(REPO_ROOT, 'src');
 const THEMES_DIR = path.join(SRC_DIR, 'assets', 'themes');
 const STYLES_DIR = path.join(SRC_DIR, 'styles');
@@ -229,7 +232,9 @@ for (const file of sourceFiles) {
         const componentScoped = anyDefs.has(name);
         anyComponentScoped ||= componentScoped;
         offenders.push({
-          location: `${path.relative(REPO_ROOT, file)}:${idx + 1}`,
+          // POSIX separators, so the output reads the same on every platform
+          // and the specs can match on one form.
+          location: `${toPosix(path.relative(REPO_ROOT, file))}:${idx + 1}`,
           name: componentScoped ? `${name}   (component-scoped)` : name,
         });
       }
