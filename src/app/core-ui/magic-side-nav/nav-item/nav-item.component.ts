@@ -65,6 +65,13 @@ import { PluginIconComponent } from '../../../plugins/ui/plugin-icon/plugin-icon
     '[class.isHidden]': 'isHidden()',
     // eslint-disable-next-line @typescript-eslint/naming-convention
     '[class.variant-nav]': "variant() === 'nav'",
+    // Which plugin this row belongs to, or absent on a row that is not a
+    // plugin's. Project and tag rows already carry `data-project-id` and
+    // `data-tag-id`; a plugin row had nothing, so nothing outside this
+    // component could tell one plugin's entry from another's — a user
+    // stylesheet could say "a plugin row" but never "the Dashboard row".
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    '[attr.data-plugin-id]': 'customPluginId()',
   },
   standalone: true,
 })
