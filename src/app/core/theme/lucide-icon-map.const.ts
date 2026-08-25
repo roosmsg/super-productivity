@@ -170,6 +170,7 @@ export const LUCIDE_ICON_MAP: [string, string][] = [
   ['online_prediction', 'radio'],
   ['open_in_new', 'external-link'],
   ['pause', 'pause'],
+  ['pending_actions', 'clipboard-clock'],
   ['photo', 'image'],
   ['play_arrow', 'play'],
   ['playlist_add', 'list-plus'],
